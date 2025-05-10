@@ -1,0 +1,2322 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>DataPowered AI Login</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.ico">
+    <link rel="manifest" href="/static/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&amp;display=swap" rel="stylesheet">
+    
+<style data-jss="" data-meta="MuiButton">
+.MuiButton-root {
+  color: #051221;
+  height: 34px;
+  padding: 10px 20px;
+  font-size: 14px;
+  min-width: 64px;
+  box-sizing: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-family: Commissioner, sans-serif;
+  font-weight: 600;
+  line-height: 1.75;
+  white-space: nowrap;
+  border-radius: 10px;
+  letter-spacing: 0.02857em;
+  text-transform: none;
+}
+.MuiButton-root:hover {
+  text-decoration: none;
+  background-color: rgba(5, 18, 33, 0.04);
+}
+.MuiButton-root.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .MuiButton-root:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-root:hover.Mui-disabled {
+  background-color: transparent;
+}
+.MuiButton-label {
+  width: 100%;
+  display: inherit;
+  align-items: center;
+  line-height: normal;
+  justify-content: center;
+}
+.MuiButton-text {
+  padding: 10px 20px;
+}
+.MuiButton-textPrimary {
+  color: #027EEA;
+}
+.MuiButton-textPrimary:hover {
+  background-color: rgba(2, 126, 234, 0.04);
+}
+@media (hover: none) {
+  .MuiButton-textPrimary:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-textSecondary {
+  color: #FF7B7B;
+}
+.MuiButton-textSecondary:hover {
+  background-color: rgba(255, 123, 123, 0.04);
+}
+@media (hover: none) {
+  .MuiButton-textSecondary:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-outlined {
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  padding: 10px 20px;
+}
+.MuiButton-outlined.Mui-disabled {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.MuiButton-outlinedPrimary {
+  color: #027EEA;
+  border: 1px solid rgba(2, 126, 234, 0.5);
+}
+.MuiButton-outlinedPrimary:hover {
+  border: 1px solid #027EEA;
+  background-color: rgba(2, 126, 234, 0.04);
+}
+@media (hover: none) {
+  .MuiButton-outlinedPrimary:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-outlinedSecondary {
+  color: #FF7B7B;
+  border: 1px solid rgba(255, 123, 123, 0.5);
+}
+.MuiButton-outlinedSecondary:hover {
+  border: 1px solid #FF7B7B;
+  background-color: rgba(255, 123, 123, 0.04);
+}
+.MuiButton-outlinedSecondary.Mui-disabled {
+  border: 1px solid rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .MuiButton-outlinedSecondary:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-contained {
+  color: rgba(0, 0, 0, 0.87);
+  padding: 10px 20px;
+  box-shadow: none;
+  background-color: #fff;
+}
+.MuiButton-contained:hover {
+  box-shadow: none;
+  background-color: #d5d5d5;
+}
+.MuiButton-contained.Mui-focusVisible {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+.MuiButton-contained:active {
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+}
+.MuiButton-contained.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+@media (hover: none) {
+  .MuiButton-contained:hover {
+    box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+    background-color: #CDD0D3;
+  }
+}
+.MuiButton-contained:hover.Mui-disabled {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.MuiButton-containedPrimary {
+  color: #fff;
+  background-color: #027EEA;
+}
+.MuiButton-containedPrimary:hover {
+  background-color: #004CAE;
+}
+@media (hover: none) {
+  .MuiButton-containedPrimary:hover {
+    background-color: #027EEA;
+  }
+}
+.MuiButton-containedSecondary {
+  color: #fff;
+  background-color: #FF7B7B;
+}
+.MuiButton-containedSecondary:hover {
+  background-color: #C84A4F;
+}
+@media (hover: none) {
+  .MuiButton-containedSecondary:hover {
+    background-color: #FF7B7B;
+  }
+}
+.MuiButton-disableElevation {
+  box-shadow: none;
+}
+.MuiButton-disableElevation:hover {
+  box-shadow: none;
+}
+.MuiButton-disableElevation.Mui-focusVisible {
+  box-shadow: none;
+}
+.MuiButton-disableElevation:active {
+  box-shadow: none;
+}
+.MuiButton-disableElevation.Mui-disabled {
+  box-shadow: none;
+}
+.MuiButton-colorInherit {
+  color: inherit;
+  border-color: currentColor;
+}
+.MuiButton-textSizeSmall {
+  padding: 4px 5px;
+  font-size: 0.8125rem;
+}
+.MuiButton-textSizeLarge {
+  padding: 8px 11px;
+  font-size: 0.9375rem;
+}
+.MuiButton-outlinedSizeSmall {
+  padding: 10px 20px;
+  font-size: 0.8125rem;
+}
+.MuiButton-outlinedSizeLarge {
+  padding: 7px 21px;
+  font-size: 0.9375rem;
+}
+.MuiButton-containedSizeSmall {
+  padding: 10px 20px;
+  font-size: 0.8125rem;
+}
+.MuiButton-containedSizeLarge {
+  padding: 8px 22px;
+  font-size: 0.9375rem;
+}
+.MuiButton-sizeSmall {
+  height: 32px;
+  padding: 10px 20px;
+  font-size: 12px;
+}
+.MuiButton-fullWidth {
+  width: 100%;
+}
+.MuiButton-startIcon {
+  display: inherit;
+  margin-left: -4px;
+  margin-right: 8px;
+}
+.MuiButton-startIcon.MuiButton-iconSizeSmall {
+  margin-left: -2px;
+}
+.MuiButton-endIcon {
+  display: inherit;
+  margin-left: 8px;
+  margin-right: -4px;
+}
+.MuiButton-endIcon.MuiButton-iconSizeSmall {
+  margin-right: -2px;
+}
+.MuiButton-iconSizeSmall > *:first-child {
+  font-size: 18px;
+}
+.MuiButton-iconSizeMedium > *:first-child {
+  font-size: 20px;
+}
+.MuiButton-iconSizeLarge > *:first-child {
+  font-size: 22px;
+}
+
+#sign-in-with-email-and-password:hover {
+    background: #2A49A4 !important;
+}
+
+a.MuiTypography-root.MuiLink-root.MuiLink-underlineHover:hover {
+    text-decoration: underline !important;
+}
+
+</style>
+  <style>
+    body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(135deg, #cfd9df 0%, #e2ebf0 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.login-container {
+  text-align: center;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 400px;
+}
+
+.login-container img {
+  width: 60px;
+  margin-bottom: 20px;
+}
+.login-container h1 {
+  font-size: 24px;
+  color: #1c1c1e;
+  margin-bottom: 40px;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d1d6;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #1c1c1e;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+  padding-right: 50px; /* Make space for the arrow button */
+  font-family: sans-serif;
+}
+.form-group input:focus {
+  border-color: #409648;
+  outline: none;
+}
+.form-group label {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  /* background: white; */
+  padding: 0 5px;
+  color: #7d7d7d;
+  transition: all 0.2s;
+  pointer-events: none;
+}
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  color: #409648;
+}
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background: white;
+  border: 1px solid #409648;
+  border-radius: 50%;
+  color: #409648;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+.arrow-button:hover {
+  background-color: #409648;
+  color: white;
+}
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #007aff, #005bb5);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+  transition: background 0.3s;
+}
+.login-button:hover {
+  background: linear-gradient(135deg, #005bb5, #003f8a);
+}
+.forgot-password {
+  margin-top: 20px;
+  color: #089648;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+}
+.forgot-password:hover {
+  text-decoration: underline;
+}.footer {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: #000;
+  transition: color 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer a {
+  background: linear-gradient(145deg, #007aff, #005bb5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.footer a:hover {
+  color: linear-gradient(145deg, #007aff, #005bb5);
+}
+
+@keyframes shake {
+  0% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  100% { transform: translateX(-5px); }
+}
+
+.shake {
+  animation: shake 0.3s ease-in-out;
+}
+
+.popup {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 300px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #409648; /* Or any other color that fits your design */
+}
+
+.close-button:hover {
+  color: #ff0000; /* Change color on hover */
+}
+  </style><script>
+
+// $(document).ready(function() {
+//     const datapoweredId = document.getElementById('datapowered-id');
+//     $('form').submit(function(event) {
+//         event.preventDefault(); // Prevent the form from submitting via the browser.
+//         var formData = $(this).serialize(); // Serialize form data.
+//         $.ajax({
+//             type: 'POST',
+//             url: '/auth',
+//             data: formData,
+//             success: function(response) {
+//                 if (response.logged_in) {
+//                     window.location.href = '/'; // Redirect to index if logged in.
+//                 } else {
+//                     triggerShakeAnimation(datapoweredId);
+//                 }
+//             }
+//         });
+//     });
+// });
+
+
+function triggerShakeAnimation(element) {
+    element.classList.add('shake');
+    // Force reflow/repaint
+    element.offsetWidth;
+    setTimeout(() => {
+        element.classList.remove('shake');
+    }, 500); // Match animation duration
+}
+
+function showPopup() {
+    document.getElementById('popup').style.display = 'block';
+  }
+
+  function hidePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
+
+//onclick="checkPassword()"
+  </script><style type="text/css">button.btn[data-v-f3fb3dc8]{display:inline-block;font-weight:300;line-height:1.25;text-align:center;white-space:nowrap;vertical-align:middle;user-select:none;border:1px solid transparent;cursor:pointer;letter-spacing:1px;transition:all 0.15s ease}button.btn.btn-sm[data-v-f3fb3dc8]{padding:0.4rem 0.8rem;font-size:0.8rem;border-radius:0.2rem}button.btn.btn-primary[data-v-f3fb3dc8]{color:#fff;background-color:#45c8f1;border-color:#45c8f1}button.btn.btn-outline-primary[data-v-f3fb3dc8]{color:#45c8f1;background-color:transparent;border-color:#45c8f1}button.btn.btn-danger[data-v-f3fb3dc8]{color:#fff;background-color:#ff4949;border-color:#ff4949}.text-muted[data-v-f3fb3dc8]{color:#8492a6}.text-center[data-v-f3fb3dc8]{text-align:center}.drop-down-enter[data-v-f3fb3dc8],.drop-down-leave-to[data-v-f3fb3dc8]{transform:translateX(0) translateY(-20px);transition-timing-function:cubic-bezier(0.74, 0.04, 0.26, 1.05);opacity:0}.drop-down-enter-active[data-v-f3fb3dc8],.drop-down-leave-active[data-v-f3fb3dc8]{transition:all 0.15s}.move-left-enter[data-v-f3fb3dc8],.move-left-leave-to[data-v-f3fb3dc8]{transform:translateY(0) translateX(-80px);transition-timing-function:cubic-bezier(0.74, 0.04, 0.26, 1.05);opacity:0}.move-left-enter-active[data-v-f3fb3dc8],.move-left-leave-active[data-v-f3fb3dc8]{transition:all 0.15s}.no-tr[data-v-f3fb3dc8]{transition:none !important}.no-tr *[data-v-f3fb3dc8]{transition:none !important}.overlay[data-v-f3fb3dc8]{position:fixed;background:rgba(220,220,220,0.8);display:flex;align-items:center;justify-content:center;top:0;left:0;right:0;bottom:0;transition:all 0.2s ease;opacity:0;visibility:hidden}.overlay .modal[data-v-f3fb3dc8]{transition:all 0.2s ease;opacity:0;transform:scale(0.6);overflow:hidden}.overlay.show[data-v-f3fb3dc8]{opacity:1;visibility:visible}.overlay.show .modal[data-v-f3fb3dc8]{opacity:1;transform:scale(1)}.panel[data-v-f3fb3dc8]{padding:6px 10px;display:flex;width:100%;box-sizing:border-box;align-items:center;border-radius:6px;position:relative;border:1px solid #eaf7ff;background:#f7fcff;outline:none;transition:all 0.07s ease-in-out}.btn[data-v-f3fb3dc8]{cursor:pointer;box-sizing:border-box}.light-btn[data-v-f3fb3dc8]{padding:10px 12px;display:flex;width:100%;box-sizing:border-box;align-items:center;border-radius:6px;position:relative;border:1px solid #eaf7ff;background:#f7fcff;outline:none;cursor:pointer;transition:all 0.07s ease-in-out}.light-btn[data-v-f3fb3dc8]:hover{background:#e0f4ff;border-color:#8acfff}.primary-btn[data-v-f3fb3dc8]{background:#239bf5;color:white;border-radius:6px;height:46px;display:flex;align-items:center;justify-content:center;transition:0.2s ease;font-size:14px;font-family:"Didact Gothic Regular",sans-serif}.primary-btn[data-v-f3fb3dc8]:hover{background:#40a8f6;color:white;text-decoration:none}.shake[data-v-f3fb3dc8]{animation:shake-f3fb3dc8 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;transform:translate3d(0, 0, 0)}@keyframes shake-f3fb3dc8{10%,90%{transform:translate3d(-1px, 0, 0)}20%,80%{transform:translate3d(2px, 0, 0)}30%,50%,70%{transform:translate3d(-4px, 0, 0)}40%,60%{transform:translate3d(4px, 0, 0)}}.pulse[data-v-f3fb3dc8]{animation:pulse-f3fb3dc8 2s ease infinite}@keyframes pulse-f3fb3dc8{0%{opacity:0.7}50%{opacity:0.4}100%{opacity:0.7}}.flash-once[data-v-f3fb3dc8]{animation:flash-once 3.5s ease 1}@keyframes fade-up-f3fb3dc8{0%{transform:translate3d(0, 10px, 0);opacity:0}100%{transform:translate3d(0, 0, 0);opacity:1}}.fade-in[data-v-f3fb3dc8]{animation:fade-in-f3fb3dc8 0.3s ease-in-out}@keyframes fade-in-f3fb3dc8{0%{opacity:0}100%{opacity:1}}.spin[data-v-f3fb3dc8]{animation-name:spin-f3fb3dc8;animation-duration:2000ms;animation-iteration-count:infinite;animation-timing-function:linear}@keyframes spin-f3fb3dc8{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}.bounceIn[data-v-f3fb3dc8]{animation-name:bounceIn-f3fb3dc8;transform-origin:center bottom;animation-duration:1s;animation-fill-mode:both;animation-iteration-count:1}@keyframes bounceIn-f3fb3dc8{0%,20%,40%,60%,80%,100%{-webkit-transition-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);transition-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1)}0%{opacity:1;-webkit-transform:scale3d(0.8, 0.8, 0.8);transform:scale3d(0.8, 0.8, 0.8)}20%{-webkit-transform:scale3d(1.1, 1.1, 1.1);transform:scale3d(1.1, 1.1, 1.1)}40%{-webkit-transform:scale3d(0.9, 0.9, 0.9);transform:scale3d(0.9, 0.9, 0.9)}60%{opacity:1;-webkit-transform:scale3d(1.03, 1.03, 1.03);transform:scale3d(1.03, 1.03, 1.03)}80%{-webkit-transform:scale3d(0.97, 0.97, 0.97);transform:scale3d(0.97, 0.97, 0.97)}100%{opacity:1;-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1)}}@keyframes dots-f3fb3dc8{0%,20%{color:rgba(0,0,0,0);text-shadow:0.25em 0 0 rgba(0,0,0,0),0.5em 0 0 rgba(0,0,0,0)}40%{color:#8492a6;text-shadow:0.25em 0 0 rgba(0,0,0,0),0.5em 0 0 rgba(0,0,0,0)}60%{text-shadow:0.25em 0 0 #8492a6,0.5em 0 0 rgba(0,0,0,0)}80%,100%{text-shadow:0.25em 0 0 #8492a6, 0.5em 0 0 #8492a6}}@keyframes recording-f3fb3dc8{0%{box-shadow:0px 0px 5px 0px rgba(173,0,0,0.3)}65%{box-shadow:0px 0px 5px 5px rgba(173,0,0,0.3)}90%{box-shadow:0px 0px 5px 5px rgba(173,0,0,0)}}@font-face{font-family:'Didact Gothic Regular';src:url(data:font/woff2;base64,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) format("woff");font-weight:normal;font-style:normal}body[data-v-f3fb3dc8]{margin:0;font-size:100%;color:#3c4858}a[data-v-f3fb3dc8]{text-decoration:none;color:#45c8f1}h1[data-v-f3fb3dc8],h2[data-v-f3fb3dc8],h3[data-v-f3fb3dc8],h4[data-v-f3fb3dc8]{margin-top:0}svg[data-v-f3fb3dc8]{outline:none}.container_selected_area[data-v-f3fb3dc8]{display:none;visibility:hidden;padding:0;position:fixed;top:0;left:0;right:0;bottom:0;z-index:2147483647}.container_selected_area.active[data-v-f3fb3dc8]{visibility:visible;display:block}.container_selected_area .label[data-v-f3fb3dc8]{font-family:"Didact Gothic Regular",sans-serif;font-size:22px;text-align:center;padding-top:15px}.area[data-v-f3fb3dc8]{display:none;position:absolute;z-index:2147483647;pointer-events:none;border:1px solid #1e83ff;background:rgba(30,131,255,0.1);box-sizing:border-box}.area.active[data-v-f3fb3dc8]{display:block;top:0;left:0}.hide[data-v-f3fb3dc8]{display:none}
+</style>
+
+
+<style>
+
+  body {
+    background: #030522; /* Fallback background color */
+    display: flex;
+    flex-direction: column;
+    row-gap: 10%;
+    overflow: hidden;
+  }
+  
+  #bg {
+    background: #030522; /* Fallback background color */
+    background: 
+    radial-gradient(
+            circle at 5% 0, 
+            rgba(1,2,19,1) 0%, 
+            rgba(7,22,73,0) 50%
+        ),
+        radial-gradient(
+            circle at 95% 0, 
+            rgba(4,9,52,1) 0%, 
+            rgba(7,22,73,0) 50%
+        ),
+        radial-gradient(
+            circle at 0 10%, 
+            rgba(4,9,52,0.8) 0%, 
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 100% 10%, 
+            rgba(4,9,52,0.8) 0%, 
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 5% 20%, 
+            rgba(4,9,52,1) 0%, 
+            rgba(7,22,73,0) 50%
+        ),
+        radial-gradient(
+            circle at 95% 20%, 
+            rgba(1,2,19,1) 0%, 
+            rgba(7,22,73,0) 50%
+        ),
+        radial-gradient(
+            circle at 0 30%, 
+            rgba(1,2,19,0.9) 0%, 
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 100% 30%, 
+            rgba(1,2,19,0.9) 0%, 
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 5% 40%, 
+            rgba(4,9,52,1) 0%, 
+            rgba(7,22,73,0) 60%
+        ),
+        radial-gradient(
+            circle at 95% 40%, 
+            rgba(1,2,19,1) 0%, 
+            rgba(7,22,73,0) 60%
+        ),
+        radial-gradient(
+            circle at 0 50%, 
+            rgba(1,2,19,0.8) 0%, 
+            transparent 20%
+        ),
+        radial-gradient(
+            circle at 100% 50%, 
+            rgba(4,9,52,0.8) 0%, 
+            transparent 20%
+        ),
+        radial-gradient(
+            circle at 5% 60%, 
+            rgba(1,2,19,1) 0%, 
+            rgba(7,22,73,0) 70%
+        ),
+        radial-gradient(
+            circle at 95% 60%, 
+            rgba(4,9,52,1) 0%, 
+            rgba(7,22,73,0) 70%
+        ),
+        radial-gradient(
+            circle at 0 70%, 
+            rgba(4,9,52,0.9) 0%, 
+            transparent 15%
+        ),
+        radial-gradient(
+            circle at 100% 70%, 
+            rgba(1,2,19,0.9) 0%, 
+            transparent 15%
+        ),
+        radial-gradient(
+            circle at 5% 80%, 
+            rgba(4,9,52,1) 0%, 
+            rgba(7,22,73,0) 80%
+        ),
+        radial-gradient(
+            circle at 95% 80%, 
+            rgba(1,2,19,1) 0%, 
+            rgba(7,22,73,0) 80%
+        ),
+        radial-gradient(
+            circle at 0 90%, 
+            rgba(1,2,19,0.8) 0%, 
+            transparent 10%
+        ),
+        radial-gradient(
+            circle at 100% 90%, 
+            rgba(4,9,52,0.8) 0%, 
+            transparent 10%
+        ),
+        radial-gradient(
+            circle at 5% 100%, 
+            rgba(1,2,19,1) 0%, 
+            rgba(7,22,73,0) 90%
+        ),
+        radial-gradient(
+            circle at 95% 100%, 
+            rgba(4,9,52,1) 0%, 
+            rgba(7,22,73,0) 90%
+        ),
+        linear-gradient(
+            to bottom, 
+            rgba(7,22,73,0.6), 
+            rgba(1,2,19,1)
+        );
+    background-blend-mode: multiply, screen, overlay, normal, normal, normal, normal, normal, normal, normal, normal, normal, normal, normal, normal, normal, normal, normal, normal;
+    opacity: 0;
+    will-change: opacity;
+    animation: backgroundAnimation 0.1s forwards;
+}
+
+@keyframes backgroundAnimation {
+    to {
+        opacity: 1;
+    }
+}
+
+  </style>
+
+</head>
+  
+  
+  <body>
+    <script>
+		//Checking if logged in
+		var loginEmail = "";
+		var loginCookie = "";
+		try {
+			loginEmail = document.cookie.split(';').find(cookie => cookie.includes('email')).split('=')[1];
+		}
+		catch {
+			console.log("No email cookie found");
+		}
+		try {
+			loginCookie = document.cookie.split(';').find(cookie => cookie.includes('login'));
+		}
+		catch {
+			console.log("No login cookie found");
+		}
+		
+		async function completeLogin() {
+			const response = await fetch('https://api.datapowered.ai/dash-login', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					'email': loginEmail,
+					'loginCookie': loginCookie,
+				})
+			});
+
+			const data = await response.json();
+			if (response.status !== 200) {
+        //We do nothing
+			}
+			else {
+				//if the data contains token in the response dictionary, store it as loginCookie
+				//redirect to /dash
+        window.location.href = '/dash';
+			}
+		}
+    if (loginEmail !== "") {
+		  completeLogin();
+    }
+
+	</script>
+    <div id="bg" style="width: 100vw; height: 100vh; position: absolute; overflow: hidden;"></div>
+    <style>
+    .login-with-google-btn, .login-with-sso-btn {
+        cursor: pointer;
+        color: #051221;
+        transition: background-color .3s, box-shadow .3s;
+        padding: 12px 16px 12px 42px;
+        border: none;
+        border-radius: 3px;
+        box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+        font-size: 14px;
+        font-weight: 500;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        background-color: white;
+        background-repeat: no-repeat;
+        background-position: 12px 11px;
+    }
+
+    .login-with-google-btn {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+    }
+
+    .login-with-sso-btn {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAyMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIwIDRIMTEuNjVDMTAuODMgMS42NyA4LjYxIDAgNiAwQzIuNjkgMCAwIDIuNjkgMCA2QzAgOS4zMSAyLjY5IDEyIDYgMTJDOC42MSAxMiAxMC44MyAxMC4zMyAxMS42NSA4SDEyTDE0IDEwTDE2IDhMMTggMTBMMjIgNS45NkwyMCA0Wk02IDlDNC4zNSA5IDMgNy42NSAzIDZDMyA0LjM1IDQuMzUgMyA2IDNDNy42NSAzIDkgNC4zNSA5IDZDOSA3LjY1IDcuNjUgOSA2IDlaIiBmaWxsPSIjMDUxMjIxIi8+Cjwvc3ZnPgo=);
+    }
+
+    .login-with-google-btn:focus, .login-with-sso-btn:focus {
+        outline: none;
+        box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 2px 4px rgba(0, 0, 0, .25), 0 0 0 3px #c8dafc;
+    }
+
+    .login-with-google-btn:disabled, .login-with-sso-btn:disabled {
+        filter: grayscale(100%);
+        background-color: #ebebeb;
+        box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+        cursor: not-allowed;
+    }
+
+    .login-with-google-btn:hover, .login-with-sso-btn:hover {
+        box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 2px 4px rgba(0, 0, 0, .25);
+        background-color: #F5F6F6 !important;
+    }
+
+    .login-with-google-btn:active, .login-with-sso-btn:active {
+        background-color: #AEB1B6 !important;
+    }
+</style>
+
+<svg id="lumin" class="mx-auto w-full contrast-125 dark:opacity-50 dark:contrast-150 lumin-animate" viewBox="0 0 1440 1093" fill="none" xmlns="http://www.w3.org/2000/svg" style="
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+">
+  <style>
+    @keyframes scaleAndFade1 {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      25% { transform: scale(1.1); opacity: 0.8; }
+    }
+
+    @keyframes opacityFade {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+    }
+
+    @keyframes scaleAndFade3 {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      75% { transform: scale(1.05); opacity: 0.8; }
+    }
+
+    #path1 {
+      animation: scaleAndFade1 45s infinite;
+    }
+
+    #path2 {
+      animation: opacityFade 60s infinite;
+    }
+
+    #path3 {
+      animation: scaleAndFade3 30s infinite;
+    }
+  </style>
+
+  <g clip-path="url(#a)">
+    <mask id="b" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="1440" height="1093">
+      <path d="M1440 0H0v1093h1440V0z" fill="#fff"></path>
+    </mask>
+    <g mask="url(#b)">
+      <g filter="url(#c)" id="path1">
+        <path d="M559.345 544.205c133.759-80.416 220.443-181.782 193.614-226.406-26.828-44.624-157.009-15.608-290.768 64.808-133.759 80.417-220.443 181.783-193.615 226.407 26.829 44.624 157.01 15.608 290.769-64.809z" fill="#14FF48"></path>
+      </g>
+      <g filter="url(#d)" id="path2">
+        <path d="M301.223 870.738c54.247 62.957 198.957 27.194 323.219-79.877 124.262-107.072 181.02-244.907 126.773-307.863-54.247-62.957-198.957-27.194-323.219 79.877-124.262 107.072-181.02 244.907-126.773 307.863z" fill="#8C1AFF"></path>
+      </g>
+      <g filter="url(#e)" id="path3">
+        <path d="M909.987 771.304c180.563-49.139 295.783-203.438 257.353-344.639-38.43-141.2-215.949-215.831-396.509-166.692-180.56 49.138-295.781 203.438-257.355 344.638 38.427 141.2 215.951 215.831 396.511 166.693z" fill="#14AAFF"></path>
+      </g>
+    </g>
+  </g>
+  <defs>
+    <filter id="c" x="-36.295" y="-3.147" width="1094.13" height="933.107" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+      <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+      <feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_251_30"></feGaussianBlur>
+    </filter>
+    <filter id="d" x="80.655" y="251.932" width="891.127" height="849.872" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+      <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+      <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_251_30"></feGaussianBlur>
+    </filter>
+    <filter id="e" x="206.086" y="-55.14" width="1268.65" height="1141.56" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+      <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+      <feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_251_30"></feGaussianBlur>
+    </filter>
+    <clipPath id="a"><path fill="#fff" d="M0 0h1440v1093H0z"></path></clipPath>
+  </defs>
+</svg>
+
+
+
+                    <style>
+						.text-animate {
+							display: inline-block;
+							opacity: 0;
+							filter: blur(10px);
+							transform: translateY(5%);
+							will-change: opacity, filter, transform;							
+						}
+
+						@keyframes fadeInText {
+							to {
+								opacity: 1;
+								filter: blur(0px);
+								transform: translateY(0);
+							}
+						}
+
+						.text-animate {
+							animation: fadeInText 1s ease forwards;
+						}
+
+            .lumin-animate {
+                //lumin animate will have opacity 0 to 1 and grow out from the center
+                display: inline-block;
+                opacity: 0;
+                transform: scale(0.1);
+                will-change: opacity, transform;
+            }
+
+            @keyframes fadeInLumin {
+                to {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+
+            .lumin-animate {
+                animation: fadeInLumin 1s ease forwards;
+            }
+
+
+					</style>
+
+<div class="centeredlogin text-animate" style="animation-delay: 0s; display: flex;justify-content: center; /* Centers children vertically in the container */align-items: center; /* Centers children horizontally in the container */flex-direction: column;width: 100vw;height: 100vh;">
+<a href="index.html" style="display: flex;
+    justify-content: center;
+    max-width: 400px;
+    margin-top: 100px;
+    margin-bottom: 20px;"><span class="et_pb_image_wrap " style="
+"><center><img width="998" height="172" decoding="async" src="img/dpai_F7F8F8_outline.webp" alt="DataPowered AI - Artificial Intelligence for Anyone" class="wp-image-6157" style="width: auto;
+    height: auto;
+    max-width: 100%;
+    filter: drop-shadow(2px 4px 6px black);"></center></span></a>
+    <div class="login-container" style="background-color: #ffffff;
+    filter: drop-shadow(2px 4px 8px #6648DD);
+">
+      
+<h1 id="form-header">Sign In</h1><button type="button" id="continue-google-btn" class="login-with-google-btn" onclick="window.location.href='https://api.datapowered.ai/login/federated/google'" style="
+    border-color: #C4C4C4;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 1px;
+    min-width: 85%;
+    margin-bottom: 15px;
+    height:40px;
+">
+  Continue with Google
+</button>
+      <button type="button" id="enterprise-sso-btn" class="login-with-sso-btn" style="
+    display: none;
+    border-color: #C4C4C4;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 1px;
+    min-width: 85%;
+    height:40px;
+">
+  Continue with Enterprise SSO
+</button>
+<div class="MuiGrid-root jss110 jss103 MuiGrid-container MuiGrid-align-items-xs-center" style="
+    width: auto;
+    margin-bottom: 32px;
+    margin-top: 32px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    unicode-bidi: isolate;
+"><hr class="MuiDivider-root jss108" style="
+    width: 160px;
+    border: none;
+    height: 1px;
+    margin: 0;
+    flex-shrink: 0;
+    background-color: rgba(0,0,0,0.12);
+    box-sizing: inherit;
+    display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    unicode-bidi: isolate;
+    overflow: hidden;
+"><p class="MuiTypography-root jss109 MuiTypography-body1" style="
+    font-weight: 700;
+    font-size: 14px;
+    font-family: Commissioner, sans-serif;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    margin: 0;
+    box-sizing: inherit;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+">Or</p><hr class="MuiDivider-root jss108" style="
+    width: 160px;
+    border: none;
+    height: 1px;
+    margin: 0;
+    flex-shrink: 0;
+    background-color: rgba(0, 0, 0, 0.12);
+    box-sizing: inherit;
+    display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    unicode-bidi: isolate;
+    overflow: hidden;
+"></div>
+      <form method="POST">
+<div id="emailinputbox" class="inputbox" style="
+    display: flex;
+    flex-direction: column;
+    box-sizing: inherit;
+    unicode-bidi: isolate;
+">
+<p class="MuiTypography-root jss122 MuiTypography-body1" style="
+    align-self: flex-start;
+    margin-bottom: 8px !important;
+    font-size: 14px;
+    font-family: Commissioner, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    margin: 0;
+    box-sizing: inherit;
+">Email</p>
+      <div class="form-group">
+        <input type="username" id="datapowered-id" name="username" placeholder=" " required="" class="">
+        <label for="datapowered-id">yourname@email.com</label>
+        
+      </div>
+</div>
+<div id="passwordinputbox" class="inputbox" style="
+    display: flex;
+    flex-direction: column;
+    box-sizing: inherit;
+    unicode-bidi: isolate;
+"><div class="MuiGrid-root jss122 MuiGrid-container MuiGrid-align-items-xs-center" style="
+    align-self: flex-start;
+    margin-bottom: 8px;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    unicode-bidi: isolate;
+"><p class="MuiTypography-root jss100 MuiTypography-body1" style="
+    align-self: flex-start;
+    font-size: 14px;
+    font-family: Commissioner, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    margin: 0;
+    box-sizing: inherit;
+    margin-right: 8px;
+">Password</p><a id="forgotpwdlink" class="MuiTypography-root MuiLink-root MuiLink-underlineHover jss123 MuiTypography-colorPrimary" role="link" style="
+    color: #69717A;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0;
+    box-sizing: inherit;
+    width: fit-content;
+    margin: 0;
+    font-size: 12px;
+    font-family: Commissioner, sans-serif;
+    font-weight: 400;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+    background-color: #fff;
+">(Forgot password?)</a><div class="jss130" style="flex: 1;box-sizing: inherit;display: block;unicode-bidi: isolate;"></div>
+
+<div id="eye-container" class="jss131" style="display: flex; cursor: pointer;">
+    <svg id="open-eye" class="MuiSvgIcon-root jss132" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="    color: #69717A;
+    font-size: 23px;
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    flex-shrink: 0;
+    user-select: none;
+    box-sizing: inherit;
+    overflow-clip-margin: content-box;
+    overflow: hidden;">
+        <path d="M12 6c3.79 0 7.17 2.13 8.82 5.5C19.17 14.87 15.79 17 12 17s-7.17-2.13-8.82-5.5C4.83 8.13 8.21 6 12 6m0-2C7 4 2.73 7.11 1 11.5 2.73 15.89 7 19 12 19s9.27-3.11 11-7.5C21.27 7.11 17 4 12 4zm0 5c1.38 0 2.5 1.12 2.5 2.5S13.38 14 12 14s-2.5-1.12-2.5-2.5S10.62 9 12 9m0-2c-2.48 0-4.5 2.02-4.5 4.5S9.52 16 12 16s4.5-2.02 4.5-4.5S14.48 7 12 7z"></path>
+    </svg>
+    <svg id="closed-eye" class="MuiSvgIcon-root jss132 hide" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="display: none;     color: #69717A;
+    font-size: 23px;
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    flex-shrink: 0;
+    user-select: none;
+    box-sizing: inherit;
+    overflow-clip-margin: content-box;
+    overflow: hidden;">
+        <path d="M12 6c3.79 0 7.17 2.13 8.82 5.5-.59 1.22-1.42 2.27-2.41 3.12l1.41 1.41c1.39-1.23 2.49-2.77 3.18-4.53C21.27 7.11 17 4 12 4c-1.27 0-2.49.2-3.64.57l1.65 1.65C10.66 6.09 11.32 6 12 6zm-1.07 1.14L13 9.21c.57.25 1.03.71 1.28 1.28l2.07 2.07c.08-.34.14-.7.14-1.07C16.5 9.01 14.48 7 12 7c-.37 0-.72.05-1.07.14zM2.01 3.87l2.68 2.68C3.06 7.83 1.77 9.53 1 11.5 2.73 15.89 7 19 12 19c1.52 0 2.98-.29 4.32-.82l3.42 3.42 1.41-1.41L3.42 2.45 2.01 3.87zm7.5 7.5l2.61 2.61c-.04.01-.08.02-.12.02-1.38 0-2.5-1.12-2.5-2.5 0-.05.01-.08.01-.13zm-3.4-3.4l1.75 1.75c-.23.55-.36 1.15-.36 1.78 0 2.48 2.02 4.5 4.5 4.5.63 0 1.23-.13 1.77-.36l.98.98c-.88.24-1.8.38-2.75.38-3.79 0-7.17-2.13-8.82-5.5.7-1.43 1.72-2.61 2.93-3.53z"></path>
+    </svg>
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+<div class="form-group">
+        <input type="password" id="datapowered-password" name="password" placeholder=" " required="" class="">
+        <div id="passworderror" style="color: red; display: none;">This is required.</div>
+        <label for="datapowered-password">Password</label>
+      </div>
+
+
+      <script>
+    const eyeContainer = document.getElementById('eye-container');
+    const openEye = document.getElementById('open-eye');
+    const closedEye = document.getElementById('closed-eye');
+    const passwordInput = document.getElementById('datapowered-password');
+
+    eyeContainer.addEventListener('click', function() {
+        if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                openEye.style.display = 'none';
+                closedEye.style.display = 'inline-block';
+            } else {
+                passwordInput.type = 'password';
+                openEye.style.display = 'inline-block';
+                closedEye.style.display = 'none';
+            }
+    });
+</script>
+<style>
+    #datapowered-password {
+        -webkit-appearance: none; /* For Safari and older Chrome browsers */
+        appearance: none; /* For modern browsers */
+    }
+
+    #datapowered-password::-ms-reveal {
+        display: none; /* Specific for IE and old Edge */
+    }
+</style>
+
+</div>
+
+<div class="MuiBox-root jss149 jss15" style="
+    margin-bottom: 24px;
+    box-sizing: inherit;
+    display: block;
+    unicode-bidi: isolate;
+">
+<!--The below button used to have type="submit" on it-->
+<button class="MuiButtonBase-root MuiButton-root MuiButton-contained jss114 jss115 sign-in-with-email-and-password MuiButton-containedPrimary" tabindex="0" id="sign-in-with-email-and-password" data-testid="sign-in-with-email-and-password" style="
+    background: #2193FD;
+    border-radius: 13px;
+    width: 400px;
+    height: 40px;
+    color: #fff;
+    padding: 10px 20px;
+    box-shadow: none;
+    font-size: 14px;
+    min-width: 64px;
+    box-sizing: border-box;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-family: Commissioner, sans-serif;
+    font-weight: 600;
+    line-height: 1.75;
+    white-space: nowrap;
+    letter-spacing: 0.02857em;
+    text-transform: none;
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    display: inline-flex;
+    outline: 0;
+    padding: 0;
+    position: relative;
+    align-items: center;
+    user-select: none;
+    vertical-align: middle;
+    -moz-appearance: none;
+    justify-content: center;
+    text-decoration: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+">
+
+<span class="MuiButton-label">Sign In</span><span class="MuiTouchRipple-root"></span></button></div></form>
+    <div id="account-action-text" class="MuiGrid-root jss30 jss15 MuiGrid-container MuiGrid-align-items-xs-center" style="
+    width: auto;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    unicode-bidi: isolate;
+    color: #051221;
+    margin: 0;
+    font-size: 12px;
+    font-family: Commissioner, sans-serif;
+    font-weight: 400;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+    background-color: #fff;
+    place-content: center;
+    margin-bottom: 24px;
+"><p class="MuiTypography-root jss21 jss10 MuiTypography-body1" style="
+    color: #69717A;
+    font-size: 14px;
+    font-family: Commissioner, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    margin: 0;
+    box-sizing: inherit;
+    margin-right: 8px;
+">Don’t have an account?</p><a id="toggle-form" class="MuiTypography-root MuiLink-root MuiLink-underlineHover jss32 jss33 MuiTypography-colorPrimary" style="
+    color: #2193FD;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 0;
+    box-sizing: inherit;
+    font-family: Commissioner, sans-serif;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+    background-color: #fff;
+">Sign Up</a></div>
+
+
+<div class="jss285 jss289 jss283" style="
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 14px;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    display: none;
+    z-index: 310000;
+    position: fixed;
+    max-width: calc(100% - 40px);
+    box-sizing: border-box;
+    max-height: 100%;
+    transition: top 300ms ease 0ms, right 300ms ease 0ms, bottom 300ms ease 0ms, left 300ms ease 0ms, margin 300ms ease 0ms, max-width 300ms ease 0ms;
+    pointer-events: none;
+    top: auto;
+"><div class="MuiCollapse-root MuiCollapse-entered" style="min-height: 0px;pointer-events: all;height: auto;overflow: visible;transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"><div class="MuiCollapse-wrapper"><div class="MuiCollapse-wrapperInner" style="
+    width: 100%;
+"><div class="jss290 jss1 jss305 jss291" style="
+    overflow: hidden;
+    border-radius: 8px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: relative;
+    transform: translateX(0);
+"><div class="jss306 jss297 jss300 jss298" aria-describedby="notistack-snackbar" role="alert" style="transform: none;transition: transform 225ms cubic-bezier(0, 0, 0.2, 1);flex-wrap: nowrap;font-size: 14px;font-family: Commissioner, sans-serif;font-weight: 500;color: #fff;background-color: #d32f2f;padding: 6px 16px;padding-left: 20px;box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);align-items: center;line-height: 1.43;border-radius: 4px;letter-spacing: 0.01071em;min-width: 288px;display: flex;"><div id="notistack-snackbar" class="jss303" style="
+    display: flex;
+    padding: 8px 0;
+    align-items: center;
+"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="font-size: 20px;margin-inline-end: 8px;fill: currentColor;width: 1em;height: 1em;display: inline-block;font-size: 1.5rem;transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;flex-shrink: 0;user-select: none;"><path d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,
+        6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,
+        13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z"></path></svg>Can't find account with email: fsafsaggs@gmail.co</div><div class="jss304" style="
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: -8px;
+    padding-left: 16px;
+"><button class="MuiButtonBase-root MuiIconButton-root close-snack-bar MuiIconButton-sizeSmall" tabindex="0" type="button" id="close-snack-bar" data-testid="close-snack-bar" style="
+    padding: 3px;
+    font-size: 1.125rem;
+    flex: 0 0 auto;
+    color: rgba(0, 0, 0, 0.54);
+    overflow: visible;
+    text-align: center;
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    display: inline-flex;
+    outline: 0;
+    position: relative;
+    align-items: center;
+    user-select: none;
+    vertical-align: middle;
+    -moz-appearance: none;
+    justify-content: center;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+"><span class="MuiIconButton-label" style="
+    width: 100%;
+    display: flex;
+    align-items: inherit;
+    justify-content: inherit;
+    padding: 3px;
+    font-size: 1.125rem;
+    flex: 0 0 auto;
+    color: rgba(0, 0, 0, 0.54);
+    padding: 12px;
+    overflow: visible;
+    text-align: center;
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 50%;
+"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="color: white;fill: currentColor;width: 1em;height: 1em;display: inline-block;font-size: 1.5rem;transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;flex-shrink: 0;user-select: none;overflow-clip-margin: content-box;overflow: hidden;padding: 3px;flex: 0 0 auto;overflow: visible;text-align: center;transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;border: 0;cursor: pointer;margin: 0;display: inline-flex;outline: 0;padding: 0;position: relative;align-items: center;border-radius: 0;vertical-align: middle;-moz-appearance: none;justify-content: center;text-decoration: none;background-color: transparent;-webkit-appearance: none;-webkit-tap-highlight-color: transparent;"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg></span></button></div></div></div></div></div></div></div>
+
+<div id="svgcontainer" style="
+    display: flex;
+    place-content: center;
+">
+<svg id="emailsentsvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="50%" viewBox="0 0 801.7 857" style="enable-background:new 0 0 801.7 857;align-self: center;display: none;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_2_);}
+	.st1{fill:#EE2328;}
+	.st2{fill:#EA8554;}
+	.st3{fill:#C0CFEB;}
+	.st4{fill:#EF3D27;}
+	.st5{fill:url(#SVGID_3_);}
+	.st6{fill:#8FC5EA;}
+	.st7{opacity:0.2;fill:#8FC5EA;enable-background:new    ;}
+	.st8{fill:#FFFFFF;}
+	.st9{fill:#DFE4E8;}
+	.st10{fill:#77B7E1;}
+	.st11{fill:#78B7E0;}
+	.st12{fill:#2B6BB4;}
+	.st13{opacity:0.2;}
+	.st14{fill:#636768;}
+	.st15{fill:#FFC829;}
+	.st16{opacity:0.1;fill:#010101;enable-background:new    ;}
+	.st17{fill:#263238;}
+	.st18{fill:#60C8F3;}
+	.st19{fill:#4977BB;}
+	.st20{fill:#6C51A1;}
+	.st21{fill:#FECF0C;}
+	.st22{opacity:0.3;}
+	.st23{fill:#332D2C;}
+	.st24{enable-background:new    ;}
+	.st25{fill:url(#SVGID_4_);}
+	.st26{fill:#FED726;}
+	.st27{fill:url(#SVGID_7_);}
+	.st28{fill:url(#SVGID_8_);}
+	.st29{fill:url(#SVGID_9_);}
+	.st30{fill:url(#SVGID_10_);}
+	.st31{fill:url(#SVGID_11_);}
+	.st32{fill:url(#SVGID_12_);}
+	.st33{fill:url(#SVGID_13_);}
+	.st34{fill:url(#SVGID_14_);}
+	.st35{fill:url(#SVGID_15_);}
+	.st36{fill:url(#SVGID_16_);}
+	.st37{fill:url(#SVGID_17_);}
+	.st38{fill:url(#SVGID_18_);}
+	.st39{fill:url(#SVGID_19_);}
+	.st40{fill:url(#SVGID_20_);}
+	.st41{fill:url(#SVGID_21_);}
+	.st42{fill:url(#SVGID_22_);}
+	.st43{fill:url(#SVGID_23_);}
+	.st44{fill:url(#SVGID_24_);}
+	.st45{fill:url(#SVGID_25_);}
+	.st46{fill:url(#SVGID_26_);}
+	.st47{fill:url(#SVGID_27_);}
+	.st48{fill:url(#SVGID_28_);}
+	.st49{fill:url(#SVGID_31_);}
+	.st50{fill:url(#SVGID_33_);}
+	.st51{fill:url(#SVGID_34_);}
+	.st52{fill:url(#SVGID_35_);}
+	.st53{fill:url(#SVGID_36_);}
+	.st54{fill:url(#SVGID_37_);}
+	.st55{fill:url(#SVGID_38_);}
+	.st56{fill:url(#SVGID_39_);}
+	.st57{fill:url(#SVGID_40_);}
+	.st58{fill:url(#SVGID_41_);}
+	.st59{fill:url(#SVGID_42_);}
+	.st60{fill:url(#SVGID_43_);}
+	.st61{fill:url(#SVGID_44_);}
+	.st62{fill:url(#SVGID_45_);}
+	.st63{fill:url(#SVGID_46_);}
+	.st64{fill:url(#SVGID_47_);}
+	.st65{fill:url(#SVGID_48_);}
+	.st66{fill:url(#SVGID_49_);}
+	.st67{fill:url(#SVGID_50_);}
+	.st68{fill:url(#SVGID_51_);}
+	.st69{fill:url(#SVGID_52_);}
+</style>
+<g>
+	
+		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="756.351" y1="32.4659" x2="316.6312" y2="500.5545" gradientTransform="matrix(1 0 0 -1 0 858)">
+		<stop offset="0" style="stop-color:#DBE2F3"></stop>
+		<stop offset="1" style="stop-color:#EAEFF8"></stop>
+	</linearGradient>
+	<path class="st0" d="M623.2,638.8c-16.2,16.8-30.6,26.7-41.7,34.1c-107.9,72.7-231.3,51.8-269.4,44.6   C250.5,706,198.6,697.8,154,657.1c-101.4-92.5-96.5-285.4-19-404.9c9.2-14.2,86.6-129.9,210.2-146.2c3-0.4,5.3-0.6,7.3-0.8   c19.1-2,137.6-12.8,234.3,68.9c13.8,11.7,36.1,32.8,56.7,65C718.9,356.7,719.1,538.9,623.2,638.8z"></path>
+	<g>
+		<g>
+			<path class="st1" d="M553.4,294.2L553.4,294.2c1.6-3.4,5.5-5.9,10.1-5.9c6.1-0.1,11.1,4.1,11.1,9.3c0-5.2,5-9.4,11.4-9.5     c4.9,0,9.1,2.4,10.8,6l0,0c6.6,12.9-22.2,24.2-22.2,24.2S547.5,306.4,553.4,294.2z"></path>
+		</g>
+	</g>
+	<g>
+		<g>
+			<ellipse class="st2" cx="684.6" cy="639.2" rx="48.6" ry="48.6"></ellipse>
+			<g>
+				<path class="st3" d="M645.8,620.2c-0.1,0-0.1,0-0.2,0c-0.2-0.1-0.3-0.4-0.2-0.6c7.5-14.9,22.5-24.1,39.1-24.1      c2.7,0,5.3,0.2,7.9,0.7c0.2,0,0.4,0.3,0.4,0.5s-0.3,0.4-0.5,0.4c-2.5-0.5-5.1-0.7-7.7-0.7c-16.3,0-31,9-38.3,23.6      C646.2,620.1,646,620.2,645.8,620.2z"></path>
+			</g>
+			<circle class="st4" cx="685.6" cy="640.3" r="39.8"></circle>
+		</g>
+		
+			<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="669.442" y1="223.1026" x2="703.2996" y2="223.1026" gradientTransform="matrix(1 0 0 -1 0 858)">
+			<stop offset="0" style="stop-color:#DBE2F3"></stop>
+			<stop offset="1" style="stop-color:#EAEFF8"></stop>
+		</linearGradient>
+		<path class="st5" d="M669.4,627.9c0,5.1,7.1,17.1,12,25c2.1,3.3,7.5,3.5,9.6,0.4c5-7.5,12.2-19.1,12.2-24.2    c0-7.9-7.6-14.5-17-14.8C677,614,669.4,620.1,669.4,627.9z M677.2,628.2c0-4.2,4.1-7.5,9.1-7.3s9.1,3.7,9.1,7.9s-4.1,7.5-9.1,7.3    S677.2,632.4,677.2,628.2z"></path>
+	</g>
+</g>
+<g>
+	<polygon class="st6" points="562.3,650.6 210.9,650.6 210.9,353.3 386.6,241.7 562.3,353.3  "></polygon>
+	<polygon class="st7" points="562.5,652 211.1,652 211.1,354.7 386.8,243.1 562.5,354.7  "></polygon>
+	<g>
+		<polygon class="st8" points="541.8,627.2 230.1,627.2 230.1,227 461.5,227 541.8,303.2   "></polygon>
+		<polygon class="st9" points="461.5,227 541.8,303.2 461.5,303.2   "></polygon>
+		<g>
+			<rect x="260.5" y="294.1" class="st10" width="173.3" height="10.3"></rect>
+		</g>
+		<g>
+			<rect x="260.5" y="320" class="st11" width="173.3" height="10.3"></rect>
+		</g>
+		<g>
+			<rect x="260.5" y="346" class="st11" width="173.3" height="10.3"></rect>
+		</g>
+		<g>
+			<rect x="260.4" y="371.9" class="st11" width="254" height="10.3"></rect>
+		</g>
+		<g>
+			<rect x="260.4" y="397.9" class="st11" width="254" height="10.3"></rect>
+		</g>
+		<g>
+			<rect x="260.4" y="423.8" class="st11" width="254" height="10.3"></rect>
+		</g>
+		<g>
+			<rect x="260.4" y="449.7" class="st11" width="254" height="10.3"></rect>
+		</g>
+		<g>
+			<rect x="260.4" y="475.7" class="st11" width="254" height="10.3"></rect>
+		</g>
+		<g>
+			<rect x="260.4" y="501.6" class="st11" width="254" height="10.3"></rect>
+		</g>
+		<g>
+			<rect x="260.4" y="527.6" class="st8" width="254" height="10.3"></rect>
+		</g>
+		<g>
+			<rect x="260.4" y="553.5" class="st8" width="254" height="10.3"></rect>
+		</g>
+		<g>
+			<rect x="260.4" y="579.4" class="st8" width="254" height="10.3"></rect>
+		</g>
+	</g>
+	<path class="st12" d="M561.6,427.1V650H210.2V427.1c15.1,8.5,29.9,17.5,44.9,26.3c14.9,8.9,29.8,17.8,44.5,26.9   c16.5,10,32.9,20.2,49.3,30.5c0.2-0.1,0.4-0.2,0.5-0.3c-0.2,0.1-0.3,0.3-0.4,0.4c12.3,7.7,24.6,15.4,36.9,23.1   c12.2-7.7,24.5-15.5,36.8-23.1c-0.2-0.1-0.3-0.3-0.4-0.4c0.2,0.1,0.4,0.2,0.5,0.3c16.4-10.2,32.8-20.4,49.3-30.5   c14.8-9,29.6-18,44.5-26.9C531.7,444.6,546.6,435.6,561.6,427.1z"></path>
+	<g class="st13">
+		<path class="st6" d="M561.6,427.1c-14.2,10-28.7,19.5-43,29.3c-14.4,9.6-28.9,19.2-43.4,28.7c-15.1,9.9-30.3,19.7-45.5,29.5    c-0.5,0.3-0.9,0.6-1.4,0.9c-13.5,8.6-27,17.2-40.5,25.8l-2,1.2l-2-1.2c-13.5-8.6-27-17.2-40.4-25.9c-0.5-0.3-1-0.6-1.4-0.9    c-15.3-9.8-30.5-19.6-45.6-29.6c-14.5-9.4-28.9-19.1-43.3-28.7c-14.3-9.8-28.8-19.4-43-29.3c15.1,8.5,29.9,17.5,44.9,26.3    c14.9,8.9,29.8,17.8,44.5,26.9c16.5,10,32.9,20.2,49.3,30.5c0.1,0,0.1,0,0.1,0.1c12.3,7.7,24.6,15.4,36.9,23.1    c12.2-7.7,24.5-15.5,36.8-23.1c0.1-0.1,0.1-0.1,0.1-0.1c16.4-10.2,32.8-20.4,49.3-30.5c14.8-9,29.6-18,44.5-26.9    C531.7,444.6,546.6,435.6,561.6,427.1z"></path>
+		<path class="st6" d="M349.5,510.5c-0.2,0.1-0.3,0.3-0.4,0.4c-1.8,1.6-3.7,3.2-5.5,4.7c-8.8,7.4-17.8,14.6-27,21.5    c-11.2,8.5-22.6,16.7-34.1,24.9c-11.6,8-23.2,15.9-35,23.5c-11.9,7.6-23.9,15-36.3,21.8c10.7-9.3,21.7-18,32.9-26.5    c11.2-8.5,22.7-16.7,34.1-24.9c11.6-8,23.2-15.9,35.1-23.5c9.4-6.1,19.1-12,28.9-17.6c2.3-1.3,4.5-2.6,6.9-3.9    C349.1,510.7,349.3,510.6,349.5,510.5z"></path>
+		<path class="st6" d="M560.8,607.2c-12.4-6.8-24.4-14.2-36.3-21.8c-11.9-7.6-23.5-15.5-35.1-23.5c-11.5-8.1-23-16.3-34.1-24.9    c-9.1-6.9-18.2-14-26.9-21.4c-1.9-1.6-3.7-3.2-5.6-4.7c-0.2-0.1-0.3-0.3-0.4-0.4c0.2,0.1,0.4,0.2,0.5,0.3c2.3,1.3,4.6,2.6,6.9,3.9    c9.8,5.6,19.4,11.6,28.9,17.6c11.9,7.6,23.5,15.5,35,23.5c11.5,8.1,23,16.3,34.1,24.9C539.1,589.2,550.1,597.9,560.8,607.2z"></path>
+	</g>
+</g>
+<g>
+	<g>
+		<path class="st14" d="M311.3,428.7h-2.4v-1.3h2.4c1.4,0,2.9,0,4.3,0v1.3C314.1,428.7,312.7,428.7,311.3,428.7z M300.5,428.6    c-2.3,0-4.5-0.1-6.7-0.2v-1.3c2.2,0.1,4.4,0.1,6.7,0.2V428.6z M324,428.5v-1.3c2.2-0.1,4.4-0.1,6.7-0.2v1.3    C328.4,428.4,326.2,428.5,324,428.5z M339.1,428l-0.1-1.3c2.2-0.1,4.4-0.2,6.7-0.3l0.1,1.3C343.5,427.8,341.3,427.9,339.1,428z     M285.4,428c-2.3-0.1-4.5-0.3-6.7-0.5l0.1-1.3c2.2,0.2,4.4,0.3,6.7,0.4L285.4,428z M354.2,427.1l-0.1-1.3c2.2-0.1,4.4-0.3,6.7-0.5    l0.1,1.3C358.6,426.8,356.4,427,354.2,427.1z M270.3,426.8c-2.3-0.2-4.5-0.5-6.7-0.8l0.2-1.2c2.2,0.3,4.4,0.5,6.7,0.8L270.3,426.8    z M369.2,426l-0.1-1.3c2.2-0.2,4.4-0.4,6.7-0.6l0.1,1.3C373.7,425.6,371.4,425.8,369.2,426z M255.3,424.8    c-2.3-0.4-4.5-0.7-6.6-1.1l0.2-1.2c2.1,0.4,4.3,0.8,6.6,1.1L255.3,424.8z M384.3,424.6l-0.1-1.3c2.2-0.2,4.4-0.5,6.7-0.7l0.1,1.3    C388.7,424.2,386.5,424.4,384.3,424.6z M399.3,423l-0.1-1.2l1.7-0.2c1.6-0.2,3.3-0.4,4.9-0.6l0.2,1.2c-1.6,0.2-3.3,0.4-4.9,0.6    L399.3,423z M240.4,422c-2.2-0.5-4.4-1-6.5-1.6l0.3-1.2c2.1,0.6,4.3,1.1,6.5,1.6L240.4,422z M414.3,421l-0.2-1.2    c2.2-0.4,4.4-0.7,6.6-1.1l0.2,1.2C418.7,420.2,416.5,420.6,414.3,421z M429.2,418.2l-0.3-1.2c2.2-0.5,4.4-0.9,6.5-1.4l0.3,1.2    C433.6,417.2,431.4,417.7,429.2,418.2z M225.8,418.1c-2.2-0.7-4.3-1.4-6.4-2.2l0.4-1.2c2,0.8,4.2,1.5,6.3,2.2L225.8,418.1z     M443.9,414.7l-0.3-1.2c2.2-0.6,4.3-1.1,6.5-1.7l0.3,1.2C448.2,413.6,446.1,414.2,443.9,414.7z M211.6,412.7    c-2.1-0.9-4.1-1.9-6.1-2.9l0.6-1.1c1.9,1,4,2,6,2.9L211.6,412.7z M458.5,410.7l-0.4-1.2c2.1-0.6,4.3-1.3,6.4-1.9l0.4,1.2    C462.7,409.4,460.6,410.1,458.5,410.7z M472.9,406.2l-0.4-1.2c2.1-0.7,4.2-1.4,6.3-2.2l0.4,1.2C477.1,404.7,475,405.5,472.9,406.2    z M198.2,405.7c-1.9-1.2-3.8-2.4-5.6-3.7l0.7-1c1.8,1.3,3.6,2.5,5.5,3.7L198.2,405.7z M487.1,401.1l-0.4-1.2    c2.1-0.8,4.2-1.6,6.3-2.4l0.5,1.2C491.3,399.6,489.2,400.4,487.1,401.1z M186,396.7c-1.7-1.5-3.4-3-4.9-4.6l0.9-0.9    c1.5,1.6,3.2,3.1,4.9,4.6L186,396.7z M501.2,395.7l-0.5-1.2c2.1-0.8,4.1-1.7,6.2-2.6l0.5,1.2C505.4,394,503.3,394.8,501.2,395.7z     M515.2,389.8l-0.5-1.2c2.1-0.9,4.1-1.8,6.1-2.7l0.5,1.1C519.3,388,517.2,388.9,515.2,389.8z M175.4,385.8    c-1.5-1.9-2.8-3.8-3.8-5.7l1.1-0.6c1,1.8,2.2,3.7,3.6,5.5L175.4,385.8z M528.9,383.5l-0.5-1.1c2-1,4.1-1.9,6.1-2.9l0.5,1.1    C533,381.6,531,382.6,528.9,383.5z M542.6,376.9l-0.6-1.1c2-1,4-2,6-3l0.6,1.1C546.6,374.9,544.6,375.9,542.6,376.9z M168.8,372.1    c-0.3-1.5-0.4-3.1-0.4-4.6c0-0.8,0-1.5,0.1-2.2l1.3,0.1c-0.1,0.7-0.1,1.4-0.1,2.1c0,1.5,0.1,2.9,0.4,4.4L168.8,372.1z M556,370    l-0.6-1.1c2-1.1,4-2.1,5.9-3.2l0.6,1.1C560,367.9,558,368.9,556,370z M569.3,362.8l-0.6-1.1c2-1.1,3.9-2.2,5.8-3.3l0.6,1.1    C573.2,360.5,571.3,361.6,569.3,362.8z M171.7,357.4l-1.2-0.5c0.8-2,1.8-4.1,3-6.1l1.1,0.7C173.4,353.5,172.4,355.5,171.7,357.4z     M582.4,355.2l-0.6-1.1c2-1.2,3.9-2.3,5.8-3.4l0.7,1.1C586.3,352.9,584.4,354,582.4,355.2z M595.3,347.3l-0.7-1.1    c2.1-1.3,3.9-2.5,5.7-3.6l0.7,1.1C599.3,344.9,597.4,346.1,595.3,347.3z M179.5,344.8l-1-0.8c1.4-1.6,2.9-3.3,4.6-5l0.9,0.9    C182.4,341.5,180.8,343.2,179.5,344.8z M608.1,339.1l-0.7-1c3.6-2.4,5.6-3.8,5.6-3.8l0.7,1C613.6,335.3,611.7,336.7,608.1,339.1z     M190.2,334.3l-0.8-1c1.7-1.4,3.5-2.8,5.3-4.2l0.7,1C193.6,331.6,191.8,333,190.2,334.3z M202.3,325.5l-0.7-1.1    c1.8-1.2,3.8-2.4,5.7-3.6l0.6,1.1C206,323.1,204.1,324.3,202.3,325.5z M215.3,317.8l-0.6-1.1c1.9-1,4-2.1,6-3.1l0.6,1.1    C219.2,315.7,217.2,316.7,215.3,317.8z M228.8,311.2l-0.5-1.1c2.1-0.9,4.2-1.8,6.2-2.6l0.5,1.2    C232.9,309.4,230.9,310.2,228.8,311.2z"></path>
+		<g>
+			<polygon class="st15" points="623,305.6 613.3,334.8 634.9,317 718.5,284.1    "></polygon>
+			<polygon class="st16" points="623,305.6 613.3,334.8 634.9,317 718.5,284.1    "></polygon>
+			<polygon class="st17" points="637.9,323.6 613.3,334.8 634.9,317    "></polygon>
+			<polygon class="st15" points="634.9,317 718.5,284.1 651.1,353.5    "></polygon>
+			<polygon class="st15" points="623,305.6 587.3,283.9 718.5,284.1    "></polygon>
+		</g>
+	</g>
+	<g>
+		<g>
+			<path class="st14" d="M560.4,587.4c-1-1-2-1.9-3.1-2.9l1.1-1.2c1,1,2.1,1.9,3.1,2.9L560.4,587.4z"></path>
+			<path class="st14" d="M546.5,754.7v-1.6c2.8-0.1,5.7-0.2,8.4-0.5l0.2,1.6C552.3,754.4,549.4,754.6,546.5,754.7z M535.9,754.5     c-2.8-0.2-5.6-0.4-8.5-0.7l0.2-1.6c2.8,0.3,5.6,0.6,8.4,0.7L535.9,754.5z M565.6,752.5l-0.3-1.5c2.8-0.6,5.5-1.3,8.1-2.1l0.5,1.5     C571.2,751.2,568.4,751.9,565.6,752.5z M516.9,752.2c-2.7-0.5-5.5-1.1-8.3-1.8l0.4-1.5c2.8,0.7,5.6,1.2,8.2,1.7L516.9,752.2z      M498.3,747.7c-2.7-0.8-5.4-1.7-8.1-2.6l0.5-1.5c2.7,0.9,5.4,1.8,8,2.5L498.3,747.7z M583.8,746.5l-0.7-1.4c2.6-1.2,5-2.6,7.3-4     l0.8,1.3C588.9,743.9,586.4,745.3,583.8,746.5z M480.2,741.5c-2.6-1-5.3-2.1-7.9-3.2l0.6-1.5c2.6,1.1,5.2,2.2,7.8,3.2     L480.2,741.5z M599.8,735.9l-1.1-1.2c2.1-1.9,4-3.9,5.7-6l1.2,1C603.9,731.9,602,734,599.8,735.9z M462.7,733.9     c-2.5-1.2-5-2.5-7.6-3.8l0.7-1.4c2.5,1.3,5.1,2.6,7.6,3.8L462.7,733.9z M445.8,725c-2.5-1.4-4.9-2.8-7.3-4.3l0.8-1.4     c2.4,1.4,4.8,2.8,7.3,4.2L445.8,725z M611.7,720.8l-1.4-0.8c1.3-2.4,2.4-5,3.4-7.6l1.5,0.5C614.2,715.7,613,718.3,611.7,720.8z      M429.5,715.2c-2.4-1.5-4.7-3.1-7.1-4.7l0.9-1.3c2.3,1.6,4.6,3.1,7,4.7L429.5,715.2z M413.8,704.3c-2.3-1.7-4.5-3.4-6.8-5.1     l1-1.2c2.2,1.7,4.5,3.4,6.7,5.1L413.8,704.3z M617.9,702.6l-1.6-0.3c0.5-2.7,0.8-5.5,0.9-8.3l1.6,0.1     C618.6,697,618.3,699.9,617.9,702.6z M398.7,692.6c-2.2-1.8-4.4-3.6-6.5-5.5l1-1.2c2.1,1.8,4.3,3.6,6.5,5.4L398.7,692.6z      M616.9,683.6c-0.3-2.7-0.7-5.5-1.2-8.3l1.6-0.3c0.6,2.8,1,5.7,1.2,8.4L616.9,683.6z M384.3,680.1c-2.1-1.9-4.2-3.8-6.2-5.7     l1.1-1.2c2.1,1.9,4.1,3.8,6.2,5.7L384.3,680.1z M370.4,667.1c-2-2-4-3.9-6.1-5.9l1.1-1.1c2,2,4,4,6,5.9L370.4,667.1z      M613.1,665.1c-0.8-2.6-1.7-5.3-2.8-7.9l1.5-0.6c1,2.7,2,5.4,2.8,8.1L613.1,665.1z M356.9,653.7c-2-2-3.9-4-5.9-6.1l1.1-1.1     c2,2,3.9,4,5.9,6.1L356.9,653.7z M606.2,647.5c-1.2-2.5-2.5-5-3.9-7.5l1.4-0.8c1.4,2.5,2.7,5,3.9,7.6L606.2,647.5z M343.6,640     c-1.9-2-3.9-4.1-5.8-6.1l1.1-1.1c2,2.1,3.9,4.1,5.8,6.1L343.6,640z M596.9,631c-1.5-2.3-3.1-4.7-4.7-7l1.3-0.9     c1.7,2.4,3.2,4.7,4.7,7.1L596.9,631z M330.5,626.2l-5.8-6.1l1.1-1.1l5.8,6.1L330.5,626.2z M586,615.5c-1.7-2.2-3.5-4.4-5.3-6.6     l1.2-1c1.9,2.2,3.7,4.4,5.3,6.6L586,615.5z M317.3,612.4c-1.9-2-3.9-4-5.9-6.1l1.1-1.1c2,2,3.9,4.1,5.9,6.1L317.3,612.4z      M573.7,601c-1.9-2-3.8-4.1-5.8-6.1l1.1-1.1c2,2.1,3.9,4.1,5.8,6.2L573.7,601z M304.1,598.8c-2-2-4-4-6-6l1.1-1.1c2,2,4,4,6,6     L304.1,598.8z M290.5,585.4c-2-2-4-3.9-6.1-5.9l1.1-1.1c2.1,2,4.1,3.9,6.1,5.9L290.5,585.4z M276.7,572.3     c-2.1-1.9-4.1-3.8-6.3-5.7l1.1-1.2c2.1,1.9,4.2,3.8,6.3,5.7L276.7,572.3z M262.6,559.7c-2.1-1.8-4.2-3.7-6.4-5.5l1-1.2     c2.2,1.8,4.3,3.7,6.4,5.5L262.6,559.7z M248,547.4c-2.2-1.8-4.4-3.5-6.6-5.3l1-1.2c2.2,1.8,4.4,3.5,6.6,5.3L248,547.4z      M233.1,535.7c-2.2-1.7-4.5-3.4-6.8-5.1l0.9-1.3c2.3,1.7,4.6,3.4,6.8,5.1L233.1,535.7z M217.8,524.4c-2.3-1.6-4.6-3.2-6.9-4.8     l0.9-1.3c2.3,1.6,4.7,3.2,7,4.8L217.8,524.4z M202.1,513.7c-2.3-1.5-4.7-3.1-7.1-4.6l0.9-1.3c2.4,1.5,4.8,3.1,7.1,4.6     L202.1,513.7z M186,503.5c-2.4-1.5-4.8-2.9-7.2-4.4l0.8-1.4c2.5,1.5,4.9,2.9,7.3,4.4L186,503.5z M169.6,493.8     c-2.4-1.4-4.9-2.8-7.4-4.1l0.8-1.4c2.5,1.4,5,2.8,7.4,4.1L169.6,493.8z M153,484.7c-2.5-1.3-5-2.6-7.5-3.9l0.7-1.4     c2.5,1.3,5,2.6,7.5,3.9L153,484.7z M136,476c-2.5-1.2-5-2.5-7.6-3.7l0.7-1.4c2.6,1.2,5.1,2.5,7.6,3.7L136,476z M118.9,467.9     c-2.5-1.2-5.1-2.3-7.7-3.5l0.6-1.4c2.6,1.2,5.2,2.3,7.7,3.5L118.9,467.9z M101.5,460.2c-2.6-1.1-5.2-2.2-7.8-3.3l0.6-1.5     c2.6,1.1,5.2,2.2,7.8,3.3L101.5,460.2z"></path>
+			<path class="st14" d="M83.4,452.7c-1.3-0.5-2.6-1-3.9-1.6l0.6-1.5c1.3,0.5,2.6,1,3.9,1.6L83.4,452.7z"></path>
+		</g>
+		<g>
+			<polygon class="st15" points="135.8,452.8 149.8,491.1 120.5,468.2 8.6,427.6    "></polygon>
+			<polygon class="st16" points="135.8,452.8 149.8,491.1 120.5,468.2 8.6,427.6    "></polygon>
+			<polygon class="st17" points="116.8,477.2 149.8,491.1 120.5,468.2    "></polygon>
+			<polygon class="st15" points="120.5,468.2 8.6,427.6 100.4,517.2    "></polygon>
+			<polygon class="st15" points="135.8,452.8 182.4,422.8 8.6,427.6    "></polygon>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<path class="st18" d="M8.8,176.1c5.3,51.1,51.2,88.3,102.3,82.9c20.7-2.2,39-10.9,53.3-24l46.6,6.8l-23.3-40.3    c5.7-13.8,8-29.1,6.4-44.8c-5.3-51.1-51.2-88.3-102.3-82.9S3.4,125,8.8,176.1z"></path>
+		<path class="st18" d="M36.7,99.2c10.1-9.9,22.4-17.5,35.9-22s28-5.8,42.1-3.9s27.9,6.9,39.7,14.9c11.9,8,21.9,18.6,29.2,31    c14.5,24.8,17,56.4,5.7,83l-0.1-1.6l23.2,40.3l1.7,3l-3.4-0.5l-46.5-7.1l1.1-0.3c-12.9,11.7-29,19.7-46.1,22.7    c-4.3,0.8-8.6,1.2-12.9,1.3c-4.3,0.4-8.6,0-12.9-0.2c-8.5-1-17.1-2.6-25.1-6c-8-3.1-15.6-7.3-22.5-12.5c-3.6-2.4-6.6-5.5-9.8-8.3    c-2.9-3.2-6-6.2-8.4-9.7C17,209.8,10.8,193.1,8.8,176.1C5.8,148.1,16.1,118.8,36.7,99.2z M27.9,223.1c2.5,3.5,5.6,6.4,8.5,9.6    c3.2,2.8,6.3,5.8,9.8,8.2c6.8,5.2,14.5,9.1,22.5,12.1c7.9,3.2,16.4,4.6,24.9,5.5c4.3,0.2,8.5,0.5,12.7,0c4.2-0.2,8.5-0.7,12.6-1.5    c16.7-3.3,32.3-11.4,44.6-23l0.5-0.4l0.6,0.1l46.6,6.5l-1.7,2.5L186,202.5l-0.4-0.8l0.3-0.8c5.2-12.8,7.4-26.8,6.6-40.6    c-1.1-13.7-4.8-27.4-11.8-39.4c-6.9-12-16.5-22.4-27.9-30.4s-24.7-13.1-38.4-15.2c-13.8-2.1-28-1.1-41.4,3.1    C59.6,82.7,47.3,90,37.1,99.7C16.5,118.9,6,148.1,8.8,176.1C10.8,193.1,17.2,209.7,27.9,223.1z"></path>
+	</g>
+	<g>
+		<path class="st8" d="M125.3,193.5l-2-8.3c-0.5-2.2-0.5-4.5,0-6.6l2.8-11.9c2.5-10.6-3.1-21.1-12.8-25.8c0.1-0.2,0.2-0.4,0.2-0.7    c0.7-3-1.3-6-4.4-6.7s-6.3,1.2-7,4.2c-0.1,0.2-0.1,0.5-0.1,0.7c-10.8,0.2-20.5,7.5-23,18.1l-2.8,11.9c-0.5,2.2-1.5,4.2-3,6    l-5.5,6.7c-2.3,2.9-0.8,7.1,2.9,7.9l48.4,10.4C122.9,200.2,126.2,197.1,125.3,193.5z"></path>
+		<path class="st8" d="M88.7,196.1c-1.6-0.3-3,1-2.7,2.5c0.6,3.1,3,5.8,6.4,6.5s6.8-0.6,8.7-3.2c0.9-1.3,0.2-3.1-1.4-3.4L88.7,196.1    z"></path>
+	</g>
+	<g>
+		<path class="st8" d="M51.6,179.6c-0.5,0-1-0.2-1.3-0.7c-4.9-7-6.6-15.4-4.9-23.6c1.7-8.2,6.6-15.3,13.9-20    c0.7-0.5,1.7-0.3,2.1,0.4c0.5,0.7,0.3,1.6-0.4,2c-6.6,4.2-11.1,10.7-12.6,18.1c-1.5,7.5,0,15.1,4.4,21.4c0.5,0.7,0.3,1.6-0.4,2    C52.2,179.5,51.9,179.6,51.6,179.6z"></path>
+		<path class="st8" d="M58,175.4c-0.5,0-1-0.2-1.3-0.7c-3.7-5.3-5-11.7-3.7-18s5.1-11.7,10.6-15.2c0.7-0.5,1.7-0.3,2.1,0.4    c0.5,0.7,0.3,1.6-0.4,2c-4.9,3.1-8.2,7.9-9.3,13.4s0,11.1,3.3,15.8c0.5,0.7,0.3,1.6-0.4,2C58.6,175.3,58.3,175.4,58,175.4z"></path>
+		<path class="st8" d="M64.5,171.2c-0.5,0-1-0.2-1.3-0.7c-2.5-3.7-3.4-8-2.6-12.4c0.9-4.3,3.5-8,7.3-10.5c0.7-0.5,1.7-0.3,2.1,0.4    c0.5,0.7,0.3,1.6-0.4,2c-3.1,2-5.2,5.1-6,8.6c-0.7,3.5,0,7.1,2.1,10.1c0.5,0.7,0.3,1.6-0.4,2C65.1,171.1,64.8,171.2,64.5,171.2z"></path>
+	</g>
+	<g>
+		<path class="st8" d="M139.7,200.2c-0.6,0-1.1-0.3-1.4-0.8c-0.4-0.7-0.1-1.6,0.7-2c7-3.5,12.2-9.4,14.6-16.7    c2.4-7.3,1.7-15-1.9-21.7c-0.4-0.7-0.1-1.6,0.7-2s1.7-0.1,2.1,0.6c4,7.5,4.8,16,2.1,24s-8.4,14.5-16.1,18.4    C140.2,200.2,139.9,200.2,139.7,200.2z"></path>
+		<path class="st8" d="M136.1,193.6c-0.6,0-1.1-0.3-1.4-0.8c-0.4-0.7-0.1-1.6,0.7-2c5.2-2.6,9-6.9,10.8-12.3c1.8-5.3,1.3-11-1.4-16    c-0.4-0.7-0.1-1.6,0.7-2s1.7-0.1,2.1,0.6c3.1,5.7,3.6,12.2,1.6,18.3s-6.4,11.1-12.3,14C136.6,193.5,136.4,193.6,136.1,193.6z"></path>
+		<path class="st8" d="M132.6,186.9c-0.6,0-1.1-0.3-1.4-0.8c-0.4-0.7-0.1-1.6,0.7-2c3.3-1.7,5.8-4.5,6.9-7.9    c1.1-3.4,0.8-7.1-0.9-10.3c-0.4-0.7-0.1-1.6,0.7-2s1.7-0.1,2.1,0.6c4.3,8.1,1,18-7.4,22.2C133,186.9,132.8,186.9,132.6,186.9z"></path>
+	</g>
+</g>
+<g>
+	<path class="st19" d="M526.5,147.1l63.2,47.5c2,1.5,3.3,3.8,3.6,6.3l3.5,28.1c0.4,3.3,4.6,4.4,6.6,1.8l18.6-24.7l46.6-62.1   c6.6-8.7,4.8-21.2-3.9-27.7l-75.9-57.1c-7.1-5.4-17.2-3.9-22.6,3.2l-43.4,57.8C516.3,128.7,518,140.7,526.5,147.1z"></path>
+	<path class="st8" d="M613.4,148c-2.2,3-1.6,7.2,1.3,9.5c3,2.2,7.2,1.6,9.5-1.3c2.2-3,1.6-7.2-1.3-9.5   C619.9,144.5,615.6,145.1,613.4,148z"></path>
+	<path class="st8" d="M588,129c-2.2,3-1.6,7.2,1.3,9.5c3,2.2,7.2,1.6,9.5-1.3c2.2-3,1.6-7.2-1.3-9.5C594.5,125.4,590.3,126,588,129z   "></path>
+	<path class="st8" d="M562.1,109.5c-2.2,3-1.6,7.2,1.3,9.5c3,2.2,7.2,1.6,9.5-1.3c2.2-3,1.6-7.2-1.3-9.5   C568.6,105.9,564.3,106.5,562.1,109.5z"></path>
+</g>
+<g>
+	<path class="st20" d="M385.2,57.1h-28.4V28.6L385.2,57.1z M359.3,54.6h20l-20-20V54.6z"></path>
+</g>
+<g>
+	<g>
+		<polygon class="st21" points="199.6,45.6 182,30.8 185.2,28 202.8,42.9   "></polygon>
+	</g>
+	<g>
+		
+			<rect x="180" y="36.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 29.1471 147.354)" class="st21" width="24.8" height="4.6"></rect>
+	</g>
+</g>
+<g>
+	<polygon class="st21" points="786.4,506.2 801.2,504.5 801.7,508.4 790,509.9 788.4,523.1 775.2,524.7 773.6,537.9 760.4,539.5    758.8,552.7 745.6,554.3 744,567.5 730.8,569.1 729.3,580.8 725.4,580.3 727.2,565.5 740.4,563.9 742,550.7 755.2,549.1    756.8,535.9 770,534.3 771.6,521.1 784.8,519.5  "></polygon>
+</g>
+<g class="st22">
+	<rect x="78.2" y="689.9" class="st23" width="12.2" height="12.2"></rect>
+	<rect x="61.4" y="654.5" class="st23" width="14.2" height="14.2"></rect>
+	<rect x="81.4" y="622.5" class="st23" width="12.3" height="12.3"></rect>
+	<rect x="111.4" y="591.8" class="st23" width="6.7" height="6.7"></rect>
+	<rect x="161.9" y="643.3" class="st23" width="12" height="12"></rect>
+	<rect x="59.5" y="592" class="st23" width="6.6" height="6.6"></rect>
+	<rect x="118.2" y="641.7" class="st23" width="9" height="9"></rect>
+	<rect x="136.3" y="605.8" class="st23" width="14" height="14"></rect>
+	<rect x="28.9" y="654.5" class="st23" width="32.5" height="1.1"></rect>
+	<rect x="128.6" y="684.6" class="st23" width="5.5" height="5.5"></rect>
+	<rect x="31.7" y="678.7" class="st23" width="17.5" height="17.5"></rect>
+	<rect x="98.8" y="663.2" class="st23" width="14.3" height="14.3"></rect>
+	<rect x="88.5" y="713.8" class="st23" width="17.2" height="17.2"></rect>
+	<rect x="42.7" y="622.1" class="st23" width="13.2" height="13.2"></rect>
+</g>
+<g>
+	<path class="st20" d="M393.3,782.8h-30.6v-30.6L393.3,782.8z M365.4,780.1h21.5l-21.5-21.5V780.1z"></path>
+</g>
+<g>
+	<g>
+		<polygon class="st21" points="503.8,803.3 486.2,788.5 489.5,785.7 507,800.6   "></polygon>
+	</g>
+	<g>
+		
+			<rect x="484.2" y="793.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -417.5473 584.3857)" class="st21" width="24.8" height="4.6"></rect>
+	</g>
+</g>
+<g>
+	<g>
+		<g class="st24">
+			<g>
+				
+					<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="589.4163" y1="526.3608" x2="611.924" y2="526.3608" gradientTransform="matrix(0.9552 0.2961 0.2961 -0.9552 -502.7883 1099.6799)">
+					<stop offset="0" style="stop-color:#ED9F21"></stop>
+					<stop offset="0.2548" style="stop-color:#F1AA1E"></stop>
+					<stop offset="1" style="stop-color:#FFC907"></stop>
+				</linearGradient>
+				<polygon id="SVGID_32_" class="st25" points="211.3,787 219.9,759.8 242.4,762.5 233.8,789     "></polygon>
+			</g>
+			<g>
+				<defs>
+					<polygon id="SVGID_5_" points="211.3,787 219.9,759.8 242.4,762.5 233.8,789      "></polygon>
+				</defs>
+				<clipPath id="SVGID_6_">
+					<use xlink:href="#SVGID_5_" style="overflow:visible;"></use>
+				</clipPath>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<polygon class="st26" points="219,760 203.2,749.7 225.5,752.6 241.5,762.7    "></polygon>
+			
+				<linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="247.4705" y1="119.9355" x2="242.6015" y2="114.1329" gradientTransform="matrix(0.9979 1.410000e-02 1.410000e-02 -0.9979 -23.9057 869.5729)">
+				<stop offset="0" style="stop-color:#FED725"></stop>
+				<stop offset="1" style="stop-color:#FED625"></stop>
+			</linearGradient>
+			<polygon class="st27" points="219,760 203.2,749.7 225.5,752.6 241.5,762.7    "></polygon>
+			
+				<linearGradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="270.1359" y1="135.8636" x2="265.0915" y2="129.8519" gradientTransform="matrix(0.9957 2.820000e-02 2.820000e-02 -0.9957 -47.9212 880.9528)">
+				<stop offset="0" style="stop-color:#FED724"></stop>
+				<stop offset="1" style="stop-color:#FED424"></stop>
+			</linearGradient>
+			<polygon class="st28" points="219,759.9 203.2,749.7 225.5,752.6 241.5,762.7    "></polygon>
+			
+				<linearGradient id="SVGID_9_" gradientUnits="userSpaceOnUse" x1="292.2738" y1="152.598" x2="287.055" y2="146.3785" gradientTransform="matrix(0.9936 4.230000e-02 4.230000e-02 -0.9936 -71.8269 892.5257)">
+				<stop offset="0" style="stop-color:#FED722"></stop>
+				<stop offset="1" style="stop-color:#FED323"></stop>
+			</linearGradient>
+			<polygon class="st29" points="219,759.9 203.3,749.7 225.5,752.6 241.5,762.7    "></polygon>
+			
+				<linearGradient id="SVGID_10_" gradientUnits="userSpaceOnUse" x1="313.964" y1="170.0299" x2="308.5721" y2="163.6042" gradientTransform="matrix(0.9915 5.640000e-02 5.640000e-02 -0.9915 -95.7326 904.0986)">
+				<stop offset="0" style="stop-color:#FED721"></stop>
+				<stop offset="0.8589" style="stop-color:#FED322"></stop>
+				<stop offset="1" style="stop-color:#FED222"></stop>
+			</linearGradient>
+			<polygon class="st30" points="219,759.9 203.3,749.7 225.5,752.6 241.5,762.7    "></polygon>
+			
+				<linearGradient id="SVGID_11_" gradientUnits="userSpaceOnUse" x1="335.3886" y1="187.9866" x2="329.8252" y2="181.3565" gradientTransform="matrix(0.9893 7.050000e-02 7.050000e-02 -0.9893 -119.7481 915.4785)">
+				<stop offset="0" style="stop-color:#FED71F"></stop>
+				<stop offset="0.7398" style="stop-color:#FED320"></stop>
+				<stop offset="1" style="stop-color:#FED021"></stop>
+			</linearGradient>
+			<polygon class="st31" points="219,759.8 203.3,749.7 225.5,752.6 241.5,762.7    "></polygon>
+			
+				<linearGradient id="SVGID_12_" gradientUnits="userSpaceOnUse" x1="356.1539" y1="206.7188" x2="350.4208" y2="199.8864" gradientTransform="matrix(0.9872 8.460000e-02 8.460000e-02 -0.9872 -143.6538 927.0515)">
+				<stop offset="0" style="stop-color:#FED71D"></stop>
+				<stop offset="0.6548" style="stop-color:#FED31F"></stop>
+				<stop offset="1" style="stop-color:#FECF20"></stop>
+			</linearGradient>
+			<polygon class="st32" points="219,759.8 203.3,749.7 225.5,752.6 241.5,762.7    "></polygon>
+			
+				<linearGradient id="SVGID_13_" gradientUnits="userSpaceOnUse" x1="376.4116" y1="226.0716" x2="370.5107" y2="219.0391" gradientTransform="matrix(0.9851 9.870000e-02 9.870000e-02 -0.9851 -167.5595 938.6243)">
+				<stop offset="0" style="stop-color:#FED81C"></stop>
+				<stop offset="0.5907" style="stop-color:#FED31D"></stop>
+				<stop offset="1" style="stop-color:#FECE1F"></stop>
+			</linearGradient>
+			<polygon class="st33" points="219,759.8 203.3,749.7 225.5,752.6 241.5,762.7    "></polygon>
+			
+				<linearGradient id="SVGID_14_" gradientUnits="userSpaceOnUse" x1="396.327" y1="245.9005" x2="390.2604" y2="238.6705" gradientTransform="matrix(0.9829 0.1128 0.1128 -0.9829 -191.575 950.0043)">
+				<stop offset="0" style="stop-color:#FED81A"></stop>
+				<stop offset="0.5402" style="stop-color:#FED31B"></stop>
+				<stop offset="1" style="stop-color:#FECC1D"></stop>
+			</linearGradient>
+			<polygon class="st34" points="219,759.7 203.3,749.7 225.5,752.6 241.5,762.7    "></polygon>
+			
+				<linearGradient id="SVGID_15_" gradientUnits="userSpaceOnUse" x1="415.5162" y1="266.4105" x2="409.2864" y2="258.9863" gradientTransform="matrix(0.9808 0.1269 0.1269 -0.9808 -215.4807 961.577)">
+				<stop offset="0" style="stop-color:#FED818"></stop>
+				<stop offset="0.4996" style="stop-color:#FED31A"></stop>
+				<stop offset="1" style="stop-color:#FECB1C"></stop>
+			</linearGradient>
+			<polygon class="st35" points="219,759.7 203.4,749.7 225.5,752.6 241.5,762.7    "></polygon>
+			
+				<linearGradient id="SVGID_16_" gradientUnits="userSpaceOnUse" x1="434.0656" y1="287.5173" x2="427.6752" y2="279.9017" gradientTransform="matrix(0.9787 0.141 0.141 -0.9787 -239.3864 973.15)">
+				<stop offset="0" style="stop-color:#FED816"></stop>
+				<stop offset="0.4656" style="stop-color:#FED318"></stop>
+				<stop offset="1" style="stop-color:#FECA1B"></stop>
+			</linearGradient>
+			<polygon class="st36" points="219.1,759.7 203.4,749.7 225.5,752.6 241.4,762.7    "></polygon>
+			
+				<linearGradient id="SVGID_17_" gradientUnits="userSpaceOnUse" x1="452.2313" y1="309.0161" x2="445.6833" y2="301.2125" gradientTransform="matrix(0.9765 0.1551 0.1551 -0.9765 -263.4019 984.5298)">
+				<stop offset="0" style="stop-color:#FED814"></stop>
+				<stop offset="0.4369" style="stop-color:#FED316"></stop>
+				<stop offset="1" style="stop-color:#FEC81A"></stop>
+			</linearGradient>
+			<polygon class="st37" points="219.1,759.6 203.4,749.7 225.5,752.6 241.4,762.7    "></polygon>
+			
+				<linearGradient id="SVGID_18_" gradientUnits="userSpaceOnUse" x1="469.5645" y1="331.1313" x2="462.8618" y2="323.1432" gradientTransform="matrix(0.9744 0.1692 0.1692 -0.9744 -287.3076 996.1028)">
+				<stop offset="0" style="stop-color:#FED812"></stop>
+				<stop offset="0.4122" style="stop-color:#FED314"></stop>
+				<stop offset="1" style="stop-color:#FEC719"></stop>
+			</linearGradient>
+			<polygon class="st38" points="219.1,759.6 203.4,749.7 225.5,752.6 241.4,762.7    "></polygon>
+			
+				<linearGradient id="SVGID_19_" gradientUnits="userSpaceOnUse" x1="486.2137" y1="353.7433" x2="479.3593" y2="345.5747" gradientTransform="matrix(0.9723 0.1833 0.1833 -0.9723 -311.2133 1007.6757)">
+				<stop offset="0" style="stop-color:#FED810"></stop>
+				<stop offset="0.3907" style="stop-color:#FED413"></stop>
+				<stop offset="0.9508" style="stop-color:#FEC718"></stop>
+				<stop offset="1" style="stop-color:#FEC518"></stop>
+			</linearGradient>
+			<polygon class="st39" points="219.1,759.6 203.4,749.7 225.5,752.6 241.4,762.6    "></polygon>
+			
+				<linearGradient id="SVGID_20_" gradientUnits="userSpaceOnUse" x1="502.4502" y1="376.6514" x2="495.4478" y2="368.3062" gradientTransform="matrix(0.9701 0.1974 0.1974 -0.9701 -335.2288 1019.0556)">
+				<stop offset="0" style="stop-color:#FED80E"></stop>
+				<stop offset="0.3718" style="stop-color:#FED411"></stop>
+				<stop offset="0.9048" style="stop-color:#FEC716"></stop>
+				<stop offset="1" style="stop-color:#FEC418"></stop>
+			</linearGradient>
+			<polygon class="st40" points="219.1,759.6 203.5,749.7 225.5,752.6 241.4,762.6    "></polygon>
+			
+				<linearGradient id="SVGID_21_" gradientUnits="userSpaceOnUse" x1="517.7662" y1="400.097" x2="510.6193" y2="391.5797" gradientTransform="matrix(0.968 0.2115 0.2115 -0.968 -359.1345 1030.6285)">
+				<stop offset="0" style="stop-color:#FED80B"></stop>
+				<stop offset="0.3551" style="stop-color:#FED40F"></stop>
+				<stop offset="0.8641" style="stop-color:#FEC715"></stop>
+				<stop offset="1" style="stop-color:#FEC317"></stop>
+			</linearGradient>
+			<polygon class="st41" points="219.1,759.5 203.5,749.7 225.5,752.6 241.4,762.6    "></polygon>
+			
+				<linearGradient id="SVGID_22_" gradientUnits="userSpaceOnUse" x1="532.3762" y1="423.9237" x2="525.0884" y2="415.2384" gradientTransform="matrix(0.9659 0.2256 0.2256 -0.9659 -383.0402 1042.2014)">
+				<stop offset="0" style="stop-color:#FED809"></stop>
+				<stop offset="0.3401" style="stop-color:#FED40C"></stop>
+				<stop offset="0.8276" style="stop-color:#FEC714"></stop>
+				<stop offset="1" style="stop-color:#FEC116"></stop>
+			</linearGradient>
+			<polygon class="st42" points="219.1,759.5 203.5,749.7 225.5,752.6 241.4,762.6    "></polygon>
+			
+				<linearGradient id="SVGID_23_" gradientUnits="userSpaceOnUse" x1="546.477" y1="448.0107" x2="539.0522" y2="439.162" gradientTransform="matrix(0.9637 0.2397 0.2397 -0.9637 -407.0557 1053.5813)">
+				<stop offset="0" style="stop-color:#FED806"></stop>
+				<stop offset="0.3265" style="stop-color:#FED40A"></stop>
+				<stop offset="0.7946" style="stop-color:#FEC712"></stop>
+				<stop offset="1" style="stop-color:#FEC015"></stop>
+			</linearGradient>
+			<polygon class="st43" points="219.1,759.5 203.5,749.7 225.5,752.6 241.4,762.6    "></polygon>
+			
+				<linearGradient id="SVGID_24_" gradientUnits="userSpaceOnUse" x1="559.6368" y1="472.507" x2="552.079" y2="463.5" gradientTransform="matrix(0.9616 0.2538 0.2538 -0.9616 -430.9614 1065.1542)">
+				<stop offset="0" style="stop-color:#FED904"></stop>
+				<stop offset="0.3143" style="stop-color:#FED408"></stop>
+				<stop offset="0.7648" style="stop-color:#FDC711"></stop>
+				<stop offset="1" style="stop-color:#FEBF14"></stop>
+			</linearGradient>
+			<polygon class="st44" points="219.1,759.4 203.5,749.7 225.5,752.6 241.4,762.6    "></polygon>
+			
+				<linearGradient id="SVGID_25_" gradientUnits="userSpaceOnUse" x1="572.077" y1="497.2687" x2="564.3903" y2="488.1083" gradientTransform="matrix(0.9595 0.2679 0.2679 -0.9595 -454.8671 1076.7272)">
+				<stop offset="0" style="stop-color:#FED901"></stop>
+				<stop offset="0.3032" style="stop-color:#FED405"></stop>
+				<stop offset="0.7376" style="stop-color:#FDC70F"></stop>
+				<stop offset="1" style="stop-color:#FEBD14"></stop>
+			</linearGradient>
+			<polygon class="st45" points="219.1,759.4 203.6,749.7 225.5,752.6 241.4,762.6    "></polygon>
+			
+				<linearGradient id="SVGID_26_" gradientUnits="userSpaceOnUse" x1="583.9578" y1="522.2241" x2="576.1467" y2="512.9152" gradientTransform="matrix(0.9573 0.282 0.282 -0.9573 -478.8826 1088.1071)">
+				<stop offset="0" style="stop-color:#FED900"></stop>
+				<stop offset="0.293" style="stop-color:#FED403"></stop>
+				<stop offset="0.7128" style="stop-color:#FDC80D"></stop>
+				<stop offset="1" style="stop-color:#FEBC13"></stop>
+			</linearGradient>
+			<polygon class="st46" points="219.1,759.4 203.6,749.7 225.5,752.6 241.4,762.6    "></polygon>
+			
+				<linearGradient id="SVGID_27_" gradientUnits="userSpaceOnUse" x1="594.851" y1="547.4938" x2="586.9197" y2="538.0417" gradientTransform="matrix(0.9552 0.2961 0.2961 -0.9552 -502.7883 1099.6799)">
+				<stop offset="0" style="stop-color:#FED900"></stop>
+				<stop offset="0.2836" style="stop-color:#FED401"></stop>
+				<stop offset="0.6899" style="stop-color:#FDC80B"></stop>
+				<stop offset="1" style="stop-color:#FEBB12"></stop>
+			</linearGradient>
+			<polygon class="st47" points="219.2,759.3 203.6,749.7 225.5,752.6 241.3,762.6    "></polygon>
+		</g>
+	</g>
+	<g>
+		<g>
+			<g class="st24">
+				<g>
+					
+						<linearGradient id="SVGID_28_" gradientUnits="userSpaceOnUse" x1="611.7729" y1="1266.9722" x2="634.2805" y2="1266.9722" gradientTransform="matrix(0.9552 0.2961 0.2961 -0.9552 -502.7883 1099.6799)">
+						<stop offset="0" style="stop-color:#ED9F21"></stop>
+						<stop offset="0.2548" style="stop-color:#F1AA1E"></stop>
+						<stop offset="1" style="stop-color:#FFC907"></stop>
+					</linearGradient>
+					<polygon id="SVGID_1_" class="st48" points="451.9,86.2 460.5,59 483,61.7 474.4,88.2      "></polygon>
+				</g>
+				<g>
+					<defs>
+						<polygon id="SVGID_29_" points="451.9,86.2 460.5,59 483,61.7 474.4,88.2       "></polygon>
+					</defs>
+					<clipPath id="SVGID_30_">
+						<use xlink:href="#SVGID_29_" style="overflow:visible;"></use>
+					</clipPath>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<polygon class="st26" points="459.6,59.2 443.8,48.9 466.1,51.8 482.1,61.9     "></polygon>
+				
+					<linearGradient id="SVGID_31_" gradientUnits="userSpaceOnUse" x1="478.6577" y1="825.4891" x2="473.7887" y2="819.6865" gradientTransform="matrix(0.9979 1.410000e-02 1.410000e-02 -0.9979 -23.9057 869.5729)">
+					<stop offset="0" style="stop-color:#FED725"></stop>
+					<stop offset="1" style="stop-color:#FED625"></stop>
+				</linearGradient>
+				<polygon class="st49" points="459.6,59.2 443.8,48.9 466.1,51.8 482.1,61.9     "></polygon>
+				
+					<linearGradient id="SVGID_33_" gradientUnits="userSpaceOnUse" x1="491.7135" y1="845.9777" x2="486.6691" y2="839.9661" gradientTransform="matrix(0.9957 2.820000e-02 2.820000e-02 -0.9957 -47.9212 880.9528)">
+					<stop offset="0" style="stop-color:#FED724"></stop>
+					<stop offset="1" style="stop-color:#FED424"></stop>
+				</linearGradient>
+				<polygon class="st50" points="459.6,59.1 443.8,48.9 466.1,51.8 482.1,61.9     "></polygon>
+				
+					<linearGradient id="SVGID_34_" gradientUnits="userSpaceOnUse" x1="504.0626" y1="866.9407" x2="498.8438" y2="860.7211" gradientTransform="matrix(0.9936 4.230000e-02 4.230000e-02 -0.9936 -71.8269 892.5257)">
+					<stop offset="0" style="stop-color:#FED722"></stop>
+					<stop offset="1" style="stop-color:#FED323"></stop>
+				</linearGradient>
+				<polygon class="st51" points="459.6,59.1 443.9,48.9 466.1,51.8 482.1,61.9     "></polygon>
+				
+					<linearGradient id="SVGID_35_" gradientUnits="userSpaceOnUse" x1="515.8176" y1="888.3322" x2="510.4256" y2="881.9066" gradientTransform="matrix(0.9915 5.640000e-02 5.640000e-02 -0.9915 -95.7326 904.0986)">
+					<stop offset="0" style="stop-color:#FED721"></stop>
+					<stop offset="0.8589" style="stop-color:#FED322"></stop>
+					<stop offset="1" style="stop-color:#FED222"></stop>
+				</linearGradient>
+				<polygon class="st52" points="459.6,59.1 443.9,48.9 466.1,51.8 482.1,61.9     "></polygon>
+				
+					<linearGradient id="SVGID_36_" gradientUnits="userSpaceOnUse" x1="527.1856" y1="910.0466" x2="521.6222" y2="903.4164" gradientTransform="matrix(0.9893 7.050000e-02 7.050000e-02 -0.9893 -119.7481 915.4785)">
+					<stop offset="0" style="stop-color:#FED71F"></stop>
+					<stop offset="0.7398" style="stop-color:#FED320"></stop>
+					<stop offset="1" style="stop-color:#FED021"></stop>
+				</linearGradient>
+				<polygon class="st53" points="459.6,59 443.9,48.9 466.1,51.8 482.1,61.9     "></polygon>
+				
+					<linearGradient id="SVGID_37_" gradientUnits="userSpaceOnUse" x1="537.7543" y1="932.1803" x2="532.0212" y2="925.3478" gradientTransform="matrix(0.9872 8.460000e-02 8.460000e-02 -0.9872 -143.6538 927.0515)">
+					<stop offset="0" style="stop-color:#FED71D"></stop>
+					<stop offset="0.6548" style="stop-color:#FED31F"></stop>
+					<stop offset="1" style="stop-color:#FECF20"></stop>
+				</linearGradient>
+				<polygon class="st54" points="459.6,59 443.9,48.9 466.1,51.8 482.1,61.9     "></polygon>
+				
+					<linearGradient id="SVGID_38_" gradientUnits="userSpaceOnUse" x1="547.7036" y1="954.6461" x2="541.8027" y2="947.6136" gradientTransform="matrix(0.9851 9.870000e-02 9.870000e-02 -0.9851 -167.5595 938.6243)">
+					<stop offset="0" style="stop-color:#FED81C"></stop>
+					<stop offset="0.5907" style="stop-color:#FED31D"></stop>
+					<stop offset="1" style="stop-color:#FECE1F"></stop>
+				</linearGradient>
+				<polygon class="st55" points="459.6,59 443.9,48.9 466.1,51.8 482.1,61.9     "></polygon>
+				
+					<linearGradient id="SVGID_39_" gradientUnits="userSpaceOnUse" x1="557.2186" y1="977.3693" x2="551.152" y2="970.1394" gradientTransform="matrix(0.9829 0.1128 0.1128 -0.9829 -191.575 950.0043)">
+					<stop offset="0" style="stop-color:#FED81A"></stop>
+					<stop offset="0.5402" style="stop-color:#FED31B"></stop>
+					<stop offset="1" style="stop-color:#FECC1D"></stop>
+				</linearGradient>
+				<polygon class="st56" points="459.6,58.9 443.9,48.9 466.1,51.8 482.1,61.9     "></polygon>
+				
+					<linearGradient id="SVGID_40_" gradientUnits="userSpaceOnUse" x1="565.9105" y1="1000.4003" x2="559.6807" y2="992.9761" gradientTransform="matrix(0.9808 0.1269 0.1269 -0.9808 -215.4807 961.577)">
+					<stop offset="0" style="stop-color:#FED818"></stop>
+					<stop offset="0.4996" style="stop-color:#FED31A"></stop>
+					<stop offset="1" style="stop-color:#FECB1C"></stop>
+				</linearGradient>
+				<polygon class="st57" points="459.6,58.9 444,48.9 466.1,51.8 482.1,61.9     "></polygon>
+				
+					<linearGradient id="SVGID_41_" gradientUnits="userSpaceOnUse" x1="573.8884" y1="1023.7258" x2="567.4981" y2="1016.1101" gradientTransform="matrix(0.9787 0.141 0.141 -0.9787 -239.3864 973.15)">
+					<stop offset="0" style="stop-color:#FED816"></stop>
+					<stop offset="0.4656" style="stop-color:#FED318"></stop>
+					<stop offset="1" style="stop-color:#FECA1B"></stop>
+				</linearGradient>
+				<polygon class="st58" points="459.7,58.9 444,48.9 466.1,51.8 482,61.9     "></polygon>
+				
+					<linearGradient id="SVGID_42_" gradientUnits="userSpaceOnUse" x1="581.4229" y1="1047.2136" x2="574.8749" y2="1039.4099" gradientTransform="matrix(0.9765 0.1551 0.1551 -0.9765 -263.4019 984.5298)">
+					<stop offset="0" style="stop-color:#FED814"></stop>
+					<stop offset="0.4369" style="stop-color:#FED316"></stop>
+					<stop offset="1" style="stop-color:#FEC81A"></stop>
+				</linearGradient>
+				<polygon class="st59" points="459.7,58.8 444,48.9 466.1,51.8 482,61.9     "></polygon>
+				
+					<linearGradient id="SVGID_43_" gradientUnits="userSpaceOnUse" x1="588.0737" y1="1070.9342" x2="581.371" y2="1062.9462" gradientTransform="matrix(0.9744 0.1692 0.1692 -0.9744 -287.3076 996.1028)">
+					<stop offset="0" style="stop-color:#FED812"></stop>
+					<stop offset="0.4122" style="stop-color:#FED314"></stop>
+					<stop offset="1" style="stop-color:#FEC719"></stop>
+				</linearGradient>
+				<polygon class="st60" points="459.7,58.8 444,48.9 466.1,51.8 482,61.9     "></polygon>
+				
+					<linearGradient id="SVGID_44_" gradientUnits="userSpaceOnUse" x1="594.0061" y1="1094.8423" x2="587.1518" y2="1086.6737" gradientTransform="matrix(0.9723 0.1833 0.1833 -0.9723 -311.2133 1007.6757)">
+					<stop offset="0" style="stop-color:#FED810"></stop>
+					<stop offset="0.3907" style="stop-color:#FED413"></stop>
+					<stop offset="0.9508" style="stop-color:#FEC718"></stop>
+					<stop offset="1" style="stop-color:#FEC518"></stop>
+				</linearGradient>
+				<polygon class="st61" points="459.7,58.8 444,48.9 466.1,51.8 482,61.8     "></polygon>
+				
+					<linearGradient id="SVGID_45_" gradientUnits="userSpaceOnUse" x1="599.4996" y1="1118.8116" x2="592.4972" y2="1110.4664" gradientTransform="matrix(0.9701 0.1974 0.1974 -0.9701 -335.2288 1019.0556)">
+					<stop offset="0" style="stop-color:#FED80E"></stop>
+					<stop offset="0.3718" style="stop-color:#FED411"></stop>
+					<stop offset="0.9048" style="stop-color:#FEC716"></stop>
+					<stop offset="1" style="stop-color:#FEC418"></stop>
+				</linearGradient>
+				<polygon class="st62" points="459.7,58.8 444.1,48.9 466.1,51.8 482,61.8     "></polygon>
+				
+					<linearGradient id="SVGID_46_" gradientUnits="userSpaceOnUse" x1="604.0682" y1="1142.9329" x2="596.9211" y2="1134.4154" gradientTransform="matrix(0.968 0.2115 0.2115 -0.968 -359.1345 1030.6285)">
+					<stop offset="0" style="stop-color:#FED80B"></stop>
+					<stop offset="0.3551" style="stop-color:#FED40F"></stop>
+					<stop offset="0.8641" style="stop-color:#FEC715"></stop>
+					<stop offset="1" style="stop-color:#FEC317"></stop>
+				</linearGradient>
+				<polygon class="st63" points="459.7,58.7 444.1,48.9 466.1,51.8 482,61.8     "></polygon>
+				
+					<linearGradient id="SVGID_47_" gradientUnits="userSpaceOnUse" x1="607.9365" y1="1167.1255" x2="600.6487" y2="1158.4402" gradientTransform="matrix(0.9659 0.2256 0.2256 -0.9659 -383.0402 1042.2014)">
+					<stop offset="0" style="stop-color:#FED809"></stop>
+					<stop offset="0.3401" style="stop-color:#FED40C"></stop>
+					<stop offset="0.8276" style="stop-color:#FEC714"></stop>
+					<stop offset="1" style="stop-color:#FEC116"></stop>
+				</linearGradient>
+				<polygon class="st64" points="459.7,58.7 444.1,48.9 466.1,51.8 482,61.8     "></polygon>
+				
+					<linearGradient id="SVGID_48_" gradientUnits="userSpaceOnUse" x1="611.303" y1="1191.3447" x2="603.8783" y2="1182.4961" gradientTransform="matrix(0.9637 0.2397 0.2397 -0.9637 -407.0557 1053.5813)">
+					<stop offset="0" style="stop-color:#FED806"></stop>
+					<stop offset="0.3265" style="stop-color:#FED40A"></stop>
+					<stop offset="0.7946" style="stop-color:#FEC712"></stop>
+					<stop offset="1" style="stop-color:#FEC015"></stop>
+				</linearGradient>
+				<polygon class="st65" points="459.7,58.7 444.1,48.9 466.1,51.8 482,61.8     "></polygon>
+				
+					<linearGradient id="SVGID_49_" gradientUnits="userSpaceOnUse" x1="613.7703" y1="1215.5928" x2="606.2125" y2="1206.5858" gradientTransform="matrix(0.9616 0.2538 0.2538 -0.9616 -430.9614 1065.1542)">
+					<stop offset="0" style="stop-color:#FED904"></stop>
+					<stop offset="0.3143" style="stop-color:#FED408"></stop>
+					<stop offset="0.7648" style="stop-color:#FDC711"></stop>
+					<stop offset="1" style="stop-color:#FEBF14"></stop>
+				</linearGradient>
+				<polygon class="st66" points="459.7,58.6 444.1,48.9 466.1,51.8 482,61.8     "></polygon>
+				
+					<linearGradient id="SVGID_50_" gradientUnits="userSpaceOnUse" x1="615.5631" y1="1239.8035" x2="607.8765" y2="1230.6431" gradientTransform="matrix(0.9595 0.2679 0.2679 -0.9595 -454.8671 1076.7272)">
+					<stop offset="0" style="stop-color:#FED901"></stop>
+					<stop offset="0.3032" style="stop-color:#FED405"></stop>
+					<stop offset="0.7376" style="stop-color:#FDC70F"></stop>
+					<stop offset="1" style="stop-color:#FEBD14"></stop>
+				</linearGradient>
+				<polygon class="st67" points="459.7,58.6 444.2,48.9 466.1,51.8 482,61.8     "></polygon>
+				
+					<linearGradient id="SVGID_51_" gradientUnits="userSpaceOnUse" x1="616.8362" y1="1263.981" x2="609.0251" y2="1254.6721" gradientTransform="matrix(0.9573 0.282 0.282 -0.9573 -478.8826 1088.1071)">
+					<stop offset="0" style="stop-color:#FED900"></stop>
+					<stop offset="0.293" style="stop-color:#FED403"></stop>
+					<stop offset="0.7128" style="stop-color:#FDC80D"></stop>
+					<stop offset="1" style="stop-color:#FEBC13"></stop>
+				</linearGradient>
+				<polygon class="st68" points="459.7,58.6 444.2,48.9 466.1,51.8 482,61.8     "></polygon>
+				
+					<linearGradient id="SVGID_52_" gradientUnits="userSpaceOnUse" x1="617.2076" y1="1288.1052" x2="609.2762" y2="1278.6531" gradientTransform="matrix(0.9552 0.2961 0.2961 -0.9552 -502.7883 1099.6799)">
+					<stop offset="0" style="stop-color:#FED900"></stop>
+					<stop offset="0.2836" style="stop-color:#FED401"></stop>
+					<stop offset="0.6899" style="stop-color:#FDC80B"></stop>
+					<stop offset="1" style="stop-color:#FEBB12"></stop>
+				</linearGradient>
+				<polygon class="st69" points="459.8,58.5 444.2,48.9 466.1,51.8 481.9,61.8     "></polygon>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
+</div>
+
+
+
+    </div>
+  </div>
+
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const signUpLink = document.getElementById('toggle-form');
+    const signUpBtn = document.getElementById('sign-in-with-email-and-password');
+    const formHeader = document.getElementById('form-header');
+    const emailInput = document.getElementById('datapowered-id');
+    const emailError = document.createElement('div');
+    emailError.textContent = 'This is required.';
+    emailError.style.color = 'red';
+    emailError.style.display = 'none'; // Initially hidden
+    emailInput.parentNode.insertBefore(emailError, emailInput.nextSibling);
+    const emailsentsvg = document.getElementById('emailsentsvg');
+
+    const labelForEmail = document.querySelector('label[for="datapowered-id"]');
+
+    function toggleLabel() {
+        if (emailInput.value) {
+            labelForEmail.style.display = 'none'; // Hide label when input is not empty
+        } else {
+            labelForEmail.style.display = ''; // Show label when input is empty
+        }
+    }
+    emailInput.addEventListener('input', toggleLabel);
+    
+    //Disappearing email label
+
+    const continueGoogleButton = document.getElementById('continue-google-btn');
+    const enterpriseSSOButton = document.getElementById('enterprise-sso-btn');
+    const emailInputBox = document.querySelector('#emailinputbox');
+    const passwordInputBox = document.querySelector('#passwordinputbox');
+    const orSection = document.querySelector('.jss110');
+    const accountActionText = document.getElementById('account-action-text').firstElementChild;
+    let resending = false; // Flag to track if email is being resent
+    let validationActivated = false; // Flag to track if validation should be active
+    let signuppage = false; // Flag to track if the user is on the sign-up page
+    let pwdresetmenu = false; // Flag to track if the user is on the password reset page
+    const passwordInput = document.getElementById('datapowered-password');
+    const passwordError = document.getElementById('passworderror');
+
+    const labelForPwd = document.querySelector('label[for="datapowered-password"]');
+
+    function togglePwdLabel() {
+        if (passwordInput.value) {
+            labelForPwd.style.display = 'none'; // Hide label when input is not empty
+        } else {
+            labelForPwd.style.display = ''; // Show label when input is empty
+        }
+    }
+
+    passwordInput.addEventListener('input', togglePwdLabel);
+
+    function isValidEmail(email) {
+        return /^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(email);
+    }
+
+    function handleInput() {
+        if (validationActivated) {
+            const emailValue = emailInput.value;
+            if (emailValue) {
+                labelForEmail.style.display = 'none'; // Hide label when input is not empty
+                if (!isValidEmail(emailValue)) {
+                    emailInput.style.borderColor = 'red'; // Set border color to red
+                    emailError.textContent = 'Invalid email address.';
+                    emailError.style.display = 'block'; // Show error message
+                } else {
+                    emailInput.style.borderColor = ''; // Reset border color
+                    emailError.style.display = 'none'; // Hide error message
+                }
+            } else {
+                labelForEmail.style.display = ''; // Show label when input is empty
+                emailInput.style.borderColor = 'red'; // Keep border red when empty
+                emailError.textContent = 'This is required.';
+                emailError.style.display = 'block'; // Show different error message
+            }
+            const passwordValue = passwordInput.value;
+            if (passwordValue) {
+                passwordError.style.display = 'none'; // Hide error message
+                passwordInput.style.borderColor = ''; // Reset border color
+            } else {
+                passwordError.style.display = 'block'; // Show error message
+                passwordInput.style.borderColor = 'red'; // Keep border red when empty
+            }
+        }
+    }
+
+    async function dp_login(email, password) {
+        try {
+            const response = await fetch('https://api.datapowered.ai/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    username: email,  // Assuming the API uses 'username' instead of 'email'
+                    password: password
+                })
+            });
+
+            const data = await response.json();  // Parsing the JSON response body
+
+            if (response.ok) {
+                console.log('Logged in successfully:', data.message);
+                document.cookie = `email=${email}; max-age=31536000`;
+                window.location.href = '/dash';
+            } else {
+              // Get the error_code from the response
+                console.log('Failed to log in:', data.message);
+                console.log('Error code:', data.error_code);
+
+                if (data.error_code === 'FEDERATED_GOOGLE') {
+                    // emailInput.style.borderColor = 'red';
+                    // emailError.textContent = 'Please sign in with Google.';
+                    // emailError.style.display = 'block';
+
+                    //We will redirect to the sign-in page for the user since we're super nice :)
+                    console.log("Redirecting to Google Federated Login")
+                    document.cookie = `email=${email}; max-age=31536000`;
+                    window.location.href='https://api.datapowered.ai/login/federated/google'
+                }
+                else if (data.error_code === 'FEDERATED_SSO') {
+                    // emailInput.style.borderColor = 'red';
+                    // emailError.textContent = 'Please sign in with your enterprise SSO.';
+                    // emailError.style.display = 'block';
+
+                    //We will redirect to the sign-in page for the user since we're super nice :)
+                    console.log("Redirecting to Enterprise SSO Login")
+                    window.location.href='https://api.datapowered.ai/login/federated/sso'
+                }
+                else if (data.error_code === 'INVALID_EMAIL') {
+                    emailInput.style.borderColor = 'red';
+                    emailError.textContent = 'Invalid email address.';
+                    emailError.style.display = 'block';
+                }
+                else if (data.error_code === 'INVALID_PASSWORD') {
+                    passwordInput.style.borderColor = 'red';
+                    passwordError.textContent = 'Invalid password.';
+                    passwordError.style.display = 'block';
+                }
+            }
+        } catch (error) {
+            console.error('Error during login:', error);
+        }
+    }
+
+    async function dp_signup(email) {
+        try {
+          const response = await fetch('https://api.datapowered.ai/signup', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                  username: email,  // Assuming the API uses 'username' instead of 'email'
+              })
+          });
+
+          const data = await response.json();  // Parsing the JSON response body
+
+          if (response.ok) {
+              console.log('Signed up successfully:', data.message);
+          } else {
+            // Get the error_code from the response
+              console.log('Failed to sign up:', data.message);
+              console.log('Error code:', data.error_code);
+
+              if (data.error_code === 'ACCOUNT_EXISTS') {
+                  emailInput.style.borderColor = 'red';
+                  emailError.textContent = 'Account already exists. Please sign in.';
+                  emailError.style.display = 'block';
+              }
+          }
+        } catch (error) {
+            console.error('Error during sign up:', error);
+        }
+    }
+
+    async function dp_resetpwd(email) {
+        try {
+          const response = await fetch('https://api.datapowered.ai/forgot-password', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                  username: email,  // Assuming the API uses 'username' instead of 'email'
+              })
+          });
+
+          const data = await response.json();  // Parsing the JSON response body
+
+          if (response.ok) {
+              console.log('Forgot password called successfully:', data.message);
+              updateUIforPasswordReset();
+          } else {
+            // Get the error_code from the response
+              console.log('Failed to call forget password:', data.message);
+              console.log('Error code:', data.error_code);
+
+              if (data.error_code === 'INVALID_EMAIL') {
+                  emailInput.style.borderColor = 'red';
+                  emailError.textContent = 'Account does not exist.';
+                  emailError.style.display = 'block';
+              }
+          }
+        } catch (error) {
+            console.error('Error during sign up:', error);
+        }
+    }
+
+    async function dp_resendverif(email) {
+        try {
+          const response = await fetch('https://api.datapowered.ai/resend-email', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                  username: email,  // Assuming the API uses 'username' instead of 'email'
+              })
+          });
+
+          const data = await response.json();  // Parsing the JSON response body
+
+          if (response.ok) {
+              console.log('Resent verification email successfully:', data.message);
+          } else {
+            // Get the error_code from the response
+              console.log('Failed to resend verification email:', data.message);
+              console.log('Error code:', data.error_code);
+
+              if (data.error_code === 'ACCOUNT_EXISTS') {
+                  emailInput.style.borderColor = 'red';
+                  emailError.textContent = 'Account already exists. Please sign in.';
+                  emailError.style.display = 'block';
+              }
+          }
+        } catch (error) {
+            console.error('Error during sign up:', error);
+        }
+    }
+
+    function handleFirstSubmit() {
+        event.preventDefault();
+        const emailValue = emailInput.value;
+        const passwordValue = passwordInput.value;
+        validationActivated = true; // Activate real-time validation on future inputs
+        if (!emailValue) {
+            emailInput.style.borderColor = 'red';
+            emailError.textContent = 'This is required.';
+            emailError.style.display = 'block';
+        } else if (!isValidEmail(emailValue)) {
+            emailInput.style.borderColor = 'red';
+            emailError.textContent = 'Invalid email address.';
+            emailError.style.display = 'block';
+        } else {
+            emailInput.style.borderColor = ''; // Reset border color
+            emailError.style.display = 'none'; // Hide error message
+            if (!(passwordInputBox.style.display === 'none')) {
+              if (!passwordValue) {
+                  passwordError.style.display = 'block'; // Show error message
+                  passwordInput.style.borderColor = 'red'; // Keep border red when empty
+              }
+              else {
+                  console.log("Attempting to log into DataPowered AI with dp auth")
+                  dp_login(emailValue, passwordValue);
+                }
+            }
+            else {
+                if (signuppage) {
+                    //Successfully signed up and sent verification email
+                    console.log("Signed up new account and sent email to account")
+                    updateUIAfterValidation();
+                    dp_signup(emailValue);
+                }
+                else if (pwdresetmenu) {
+                    //Successfully sent password reset email
+                    console.log("Sent password reset email to account")
+                    dp_resetpwd(emailValue);
+                }
+                else {
+                  console.log("This route is disabled.")
+                  //console.log("Attempting to log into DataPowered AI with Enterprise SSO")
+                  //Enterprise SSO
+                  //window.location.href='https://api.datapowered.ai/login/federated/sso'
+                }
+              }
+          }
+        
+        if (!passwordValue) {
+            passwordError.style.display = 'block'; // Show error message
+            passwordInput.style.borderColor = 'red'; // Keep border red when empty
+        } else {
+            passwordError.style.display = 'none'; // Hide error message
+            passwordInput.style.borderColor = ''; // Reset border color
+        }
+        console.log("Handled first submission!")
+    }
+
+    emailInput.addEventListener('input', handleInput);
+    passwordInput.addEventListener('input', handleInput);
+    signUpBtn.addEventListener('click', handleFirstSubmit); // Trigger validation on button click
+
+    function updateUIAfterValidation() {
+        console.log("a11")
+        formHeader.textContent = "Check your inbox for your invitation to DataPowered AI.";
+        continueGoogleButton.style.display = 'none';
+        orSection.style.display = 'none';
+        emailInputBox.style.display = 'none';
+        signUpBtn.style.display = 'none';
+        accountActionText.innerHTML = "Don’t see the email? Check your spam folder or ";
+        signUpLink.textContent = "resend the email";
+        
+        formHeader.style.marginBottom = '0px';
+        emailsentsvg.style.display = 'block';
+
+    }
+
+    function updateUIforPasswordReset() {
+        console.log("a10")
+        formHeader.textContent = "Check your inbox to reset your password in DataPowered AI.";
+        continueGoogleButton.style.display = 'none';
+        orSection.style.display = 'none';
+        emailInputBox.style.display = 'none';
+        signUpBtn.style.display = 'none';
+        accountActionText.innerHTML = "";
+        signUpLink.textContent = "";
+        
+        formHeader.style.marginBottom = '0px';
+        emailsentsvg.style.display = 'block';
+    }
+
+    function toggleSignUpSignIn() {
+        emailInput.style.borderColor = '';
+        emailError.style.display = 'none';
+        passwordInput.style.borderColor = '';
+        passwordError.style.display = 'none';
+        validationActivated = false;
+        if (formHeader.textContent === "Sign In") { //Sign In -> Sign Up
+            console.log("a6")
+            formHeader.textContent = "Sign Up";
+            enterpriseSSOButton.style.display = 'none';
+            continueGoogleButton.style.display = '';
+            passwordInputBox.style.display = 'none';
+            signUpBtn.textContent = "Create Your Account";
+            accountActionText.textContent = "Already have an account?";
+            signUpLink.textContent = "Sign In";
+            signuppage = true;
+        } else if (formHeader.textContent === "Sign Up") { //Sign Up -> Sign In
+            console.log("a7")
+            formHeader.textContent = "Sign In";
+            signUpBtn.textContent = "Sign In";
+            //enterpriseSSOButton.style.display = '';
+            continueGoogleButton.style.display = '';
+            passwordInputBox.style.display = 'flex';
+            signUpLink.textContent = "Sign Up";
+            accountActionText.textContent = "Don’t have an account?";
+            signuppage = false;
+        }
+        else if (formHeader.textContent === "Check your inbox for your invitation to DataPowered AI.") { //Sign up Email Resend
+          console.log("a8")
+
+          function handleResendEmail() {
+                if (resending) return; // Prevent multiple clicks
+                resending = true;
+
+                let countdown = 60;
+                prevcolor = signUpLink.style.color;
+                prevcursor = signUpLink.style.cursor;
+                signUpLink.style.color = '#9CA0A6'; // Change text color
+                signUpLink.style.cursor = 'not-allowed'; // Change cursor style
+                signUpLink.textContent = `resend the email (${countdown})`;
+
+                dp_resendverif(emailInput.value);
+
+                // Function to update the countdown
+                const intervalId = setInterval(() => {
+                    countdown -= 1; // Decrement countdown each second
+                    if (countdown <= 0) {
+                        clearInterval(intervalId);
+                        signUpLink.textContent = 'resend the email';
+                        signUpLink.style.color = prevcolor; // Reset text color
+                        signUpLink.style.cursor = prevcursor; // Reset cursor style
+                        resending = false;
+                    } else {
+                        signUpLink.textContent = `resend the email (${countdown})`;
+                    }
+                }, 1000); // Update every second
+            }
+
+            handleResendEmail();
+
+        }
+    }
+
+    signUpLink.addEventListener('click', toggleSignUpSignIn);
+
+    enterpriseSSOButton.addEventListener('click', function() {
+        console.log("a2")
+        formHeader.textContent = "Enter Your Work Email";
+        signUpBtn.textContent = "Continue with Enterprise SSO";
+        orSection.style.display = 'none';
+        passwordInputBox.style.display = 'none';
+        accountActionText.textContent = "";
+        signUpLink.textContent = "Return to Sign In";
+        continueGoogleButton.style.display = 'none';
+        enterpriseSSOButton.style.display = 'none';
+        emailInput.style.borderColor = '';
+        emailError.style.display = 'none';
+        passwordInput.style.borderColor = '';
+        passwordError.style.display = 'none';
+        validationActivated = false;
+
+        signUpLink.removeEventListener('click', toggleSignUpSignIn);
+        signUpLink.addEventListener('click', function returnToSignIn() {
+            console.log("a3")
+            emailInput.style.borderColor = '';
+            emailError.style.display = 'none';
+            passwordInput.style.borderColor = '';
+            passwordError.style.display = 'none';
+            validationActivated = false;
+            formHeader.textContent = "Sign In";
+            signUpBtn.textContent = "Sign In";
+            //enterpriseSSOButton.style.display = '';
+            continueGoogleButton.style.display = '';
+            passwordInputBox.style.display = 'flex';
+            orSection.style.display = 'flex';
+            signUpLink.textContent = "Sign Up";
+            accountActionText.textContent = "Don’t have an account?";
+            signuppage = false;
+            
+            signUpLink.removeEventListener('click', returnToSignIn);
+            signUpLink.addEventListener('click', toggleSignUpSignIn);
+        });
+    });
+
+    const forgotPasswordLink = document.getElementById('forgotpwdlink');
+    forgotPasswordLink.addEventListener('click', function() {
+        console.log("a1")
+        formHeader.textContent = "Enter Your Email";
+        signUpBtn.textContent = "Reset Password";
+        pwdresetmenu = true;
+        orSection.style.display = 'none';
+        passwordInputBox.style.display = 'none';
+        accountActionText.textContent = "";
+        signUpLink.textContent = "Return to Sign In";
+        continueGoogleButton.style.display = 'none';
+        enterpriseSSOButton.style.display = 'none';
+        emailInput.style.borderColor = '';
+        emailError.style.display = 'none';
+        passwordInput.style.borderColor = '';
+        passwordError.style.display = 'none';
+        validationActivated = false;
+
+        signUpLink.removeEventListener('click', toggleSignUpSignIn);
+        signUpLink.addEventListener('click', function returnToSignIn() {
+            console.log("a4")
+            pwdresetmenu = false;
+            emailInput.style.borderColor = '';
+            emailError.style.display = 'none';
+            passwordInput.style.borderColor = '';
+            passwordError.style.display = 'none';
+            validationActivated = false;
+            formHeader.textContent = "Sign In";
+            signUpBtn.textContent = "Sign In";
+            orSection.style.display = 'flex';
+            emailInputBox.style.display = 'flex';
+            passwordInputBox.style.display = 'flex';
+            accountActionText.textContent = "Don’t have an account?";
+            signUpLink.textContent = "Sign Up";
+            continueGoogleButton.style.display = '';
+            //enterpriseSSOButton.style.display = '';
+            signuppage = false;
+            
+            signUpLink.removeEventListener('click', returnToSignIn);
+            signUpLink.addEventListener('click', toggleSignUpSignIn);
+        });
+    });
+
+
+
+});
+</script>
+</body></html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Privacy Toggle</title>
+    <link rel="stylesheet" type="text/css" href="../chatcss/font-awesome.min.css">
+    <style>
+        .html, body {
+            background: black;
+        }
+/*Privacy Toggle CSS */
+.btn-color-mode-switch{
+    display: inline-block;
+    margin: 0px;
+    position: relative;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner{
+    margin: 0px;
+    width: 140px;
+    height: 30px;
+    background: #E0E0E0;
+    border-radius: 26px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    /*box-shadow: 0px 0px 8px 0px rgba(17, 17, 17, 0.34) inset;*/
+    display: block;
+	color:black;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:before{
+    content: attr(data-on);
+    position: absolute;
+    font-size: 12px;
+    font-weight: 500;
+    top: 7px;
+    right: 20px;
+
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:after{
+    content: attr(data-off);
+    width: 70px;
+    height: 15px;
+    background: #fff;
+    border-radius: 26px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 6px -2px #111;
+    padding: 5px 0px;
+	font-size: 12px;
+    font-weight: 600;
+}
+
+.btn-color-mode-switch > .alert{
+    display: none;
+    background: #FF9800;
+    border: none;
+    color: #fff;
+}
+
+.btn-color-mode-switch input[type="checkbox"]{
+    cursor: pointer;
+    width: 50px;
+    height: 25px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    margin: 0px;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
+    /* background: #151515;
+    color: #fff; */
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:after{
+    content: attr(data-on);
+    left: 68px;
+    background: white;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:before{
+    content: attr(data-off);
+    right: auto;
+    left: 20px;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
+    /*background: #66BB6A; */
+    /*color: #fff;*/
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked ~ .alert{
+    display: block;
+}
+    </style>
+</head>
+<body>
+    <div class="btn-container" style="
+	cursor: pointer;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+">
+					
+						<i id="ailockicon" class="fa fa-lock" aria-hidden="true" style="color: red;"></i><label class="switch btn-color-mode-switch">
+							<input type="checkbox" name="color_mode" id="color_mode" value="1" onclick="togglePrivacy()">
+							<label style="cursor: pointer;" for="color_mode" data-on="Public" data-off="Private" class="btn-color-mode-switch-inner"></label>
+						</label>
+					<i id="aiunlockicon" class="fa fa-unlock" aria-hidden="true" style="color: lightgrey;"></i>
+					<script>
+						function togglePrivacy() {
+							var x = document.getElementById("color_mode");
+                            locksvg = document.querySelector("#locksvg");
+							if (x.checked == false) {
+								console.log("Checked Box")
+								document.getElementById("aiunlockicon").style.color = "lightgrey";
+								document.getElementById("ailockicon").style.color = "red";
+								private = true;
+                // getChannels()[curChannel].private = true;
+                // console.log("Private is now: " + getChannels()[curChannel].private);
+                // privateToLocalStorage(true);
+                
+                privatesvg = '<title>This is a private AI that can be only be seen by you.</title><path d="M17,9V7A5,5,0,0,0,7,7V9a3,3,0,0,0-3,3v7a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V12A3,3,0,0,0,17,9ZM9,7a3,3,0,0,1,6,0V9H9Zm9,12a1,1,0,0,1-1,1H7a1,1,0,0,1-1-1V12a1,1,0,0,1,1-1H17a1,1,0,0,1,1,1Z"></path>'
+                locksvg.innerHTML = privatesvg;
+  
+							} else {
+								console.log("Unchecked Box")
+								document.getElementById("aiunlockicon").style.color = "#34D620";
+								document.getElementById("ailockicon").style.color = "lightgrey";
+								private = false;
+                // getChannels()[curChannel].private = false;
+                // console.log("Private is now: " + getChannels()[curChannel].private);
+                // privateToLocalStorage(false);
+
+                publicsvg = '<title>This is a public AI that can be be seen by everyone.</title><path d="M12 4c-1.648 0-3 1.352-3 3v3h9a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h1V7c0-2.752 2.248-5 5-5s5 2.248 5 5a1 1 0 1 1-2 0c0-1.648-1.352-3-3-3zm-6 8v8h12v-8H6z"></path>'
+                locksvg.innerHTML = publicsvg;
+
+							}
+						}
+					</script>
+				
+				</div>
+</body>
+</html>
